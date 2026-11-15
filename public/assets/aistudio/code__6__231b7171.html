@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>MayurienShop</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700;800&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'primary': '#674ba7', 'tertiary-fixed-dim': '#e8c346', 'tertiary-fixed': '#ffe081', 'on-tertiary': '#ffffff', 'on-secondary-container': '#792248', 'tertiary': '#725c00', 'surface-container-low': '#f6f3f2', 'on-secondary-fixed': '#3e001f', 'on-primary-fixed': '#24005b', 'inverse-primary': '#d1bcff', 'secondary-fixed-dim': '#ffb0ca', 'on-tertiary-fixed-variant': '#564500', 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#513490', 'on-surface': '#1c1b1b', 'secondary': '#9b3e64', 'secondary-container': '#fe8eb7', 'inverse-surface': '#313030', 'on-secondary-fixed-variant': '#7d264c', 'on-secondary': '#ffffff', 'on-tertiary-fixed': '#231b00', 'surface-bright': '#fcf9f8', 'primary-fixed': '#eaddff', 'error': '#ba1a1a', 'surface-container-highest': '#e5e2e1', 'on-primary-container': '#fffbff', 'outline': '#7a7582', 'on-background': '#1c1b1b', 'secondary-fixed': '#ffd9e3', 'on-error-container': '#93000a', 'primary-fixed-dim': '#d1bcff', 'surface-container': '#f0eded', 'primary-container': '#8064c2', 'on-error': '#ffffff', 'on-primary': '#ffffff', 'surface-container-high': '#eae7e7', 'background': '#fcf9f8', 'outline-variant': '#cbc4d3', 'tertiary-container': '#caa82c', 'on-tertiary-container': '#4e3e00', 'error-container': '#ffdad6', 'surface-dim': '#dcd9d9', 'surface': '#fcf9f8', 'inverse-on-surface': '#f3f0ef', 'surface-variant': '#e5e2e1', 'surface-tint': '#6a4da9', 'on-surface-variant': '#494551' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-lg': '1.5rem', 'margin-tablet': '2rem', 'margin': '1rem', 'space-xs': '0.25rem', 'space-sm': '0.5rem', 'space-xl': '2.5rem', 'margin-desktop': '3rem', 'gutter-desktop': '1.5rem', 'space-md': '1rem', 'gutter': '1rem' }, fontFamily: { 'currency-price': ['Nunito Sans'], 'body-lg': ['Nunito Sans'], 'display-hero-mobile': ['Quicksand'], 'label-lg': ['Nunito Sans'], 'headline-lg-mobile': ['Quicksand'], 'title-md': ['Quicksand'], 'body-sm': ['Nunito Sans'], 'headline-sm': ['Quicksand'], 'display-hero': ['Quicksand'], 'body-md': ['Nunito Sans'], 'headline-lg': ['Quicksand'], 'headline-md': ['Quicksand'], 'label-md': ['Nunito Sans'], 'fredoka': ['Fredoka', 'sans-serif'] }, fontSize: { 'currency-price': ['16px', { lineHeight: '22px', letterSpacing: '0.01em', fontWeight: '800' }], 'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }], 'display-hero-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.02em', fontWeight: '700' }], 'headline-lg-mobile': ['24px', { lineHeight: '32px', fontWeight: '700' }], 'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'display-hero': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }], 'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.03em', fontWeight: '700' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><button aria-label="Kembali" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface truncate text-center flex-1 px-space-xs font-semibold">Detail Produk</h1><div class="flex items-center gap-space-xs"><button aria-label="Menu Opsi" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-32">
+<!-- Interactive Toast Notification -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 pointer-events-none opacity-0 translate-y-[-8px]" id="toast-wishlist">
+<div class="bg-surface-container-lowest text-on-surface px-space-md py-space-sm rounded-xl shadow-[3px_3px_0px_#171717] border border-[#171717] flex items-center gap-space-xs text-body-sm font-body-sm font-semibold">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span id="toast-text">Tersimpan di Wishlist kamu!</span>
+</div>
+</div>
+<!-- Main Content Wrapper with Gutter -->
+<div class="px-margin flex flex-col gap-space-lg mt-space-sm">
+<!-- 1. Galeri Foto Produk Mobile -->
+<section class="flex flex-col gap-space-sm">
+<!-- Main Photo Canvas with Hard Shadow & Neobrutalist styling -->
+<div class="relative w-full aspect-square bg-[#F3EFFE] rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-300" data-alt="Close-up shot of a premium aesthetic Pastel Cloud Daily Planner 2025 hardcover journal in sweet lilac purple with delicate embossed gold foil clouds and celestial stars on desk surface surrounded by pastel markers and washi tapes, soft warm studio lighting, 4k sharp details" id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANFToZYHi8ew6JFWOD6fMoN8Cfk2pqxdII_q4nIyK6lHl0RmUnsjERLVIpefaWGm7d7SsYMW2bKbIN8YLVaT-XUZexT_m66VAZ2MrOhezJ4nu62HpHPws0nJefQHkcFdqsf6p4-dgR352fAbfrK_kM-L40Nar6CkEt_QQrDy_mnVjvXA3NrMGNr6_EZxcwKD6ZIuYgOjFhGS27Afo9v7gSEbt2cBzeznx9lEQ9PQ"/>
+<!-- Floating Badges Top Left -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 items-start pointer-events-none">
+<span class="bg-[#FF8FB8] text-[#171717] text-label-md font-label-md px-2.5 py-1 rounded-full border border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center gap-1 font-bold">
+            🔥 Hype Item
+          </span>
+<span class="bg-[#BCE3FF] text-[#171717] text-label-md font-label-md px-2.5 py-1 rounded-full border border-[#171717] shadow-[2px_2px_0px_#171717] font-bold">
+            Diskon 20%
+          </span>
+</div>
+<!-- Action Floating Buttons Top Right -->
+<div class="absolute top-3 right-3 flex flex-col gap-2">
+<button aria-label="Simpan ke Wishlist" class="w-9 h-9 rounded-full bg-surface-container-lowest border border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center text-on-surface hover:text-secondary active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" id="btn-wishlist" onclick="toggleWishlist()">
+<span class="material-symbols-outlined text-[20px]" id="icon-wishlist">favorite_border</span>
+</button>
+<button aria-label="Lihat Lebih Dekat" class="w-9 h-9 rounded-full bg-surface-container-lowest border border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center text-on-surface hover:text-primary active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" onclick="previewZoom()">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+</div>
+<!-- Carousel Counter Badge Bottom Right -->
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/95 backdrop-blur text-on-surface text-label-md font-label-md px-2.5 py-1 rounded-full border border-[#171717] shadow-[2px_2px_0px_#171717] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+<span id="gallery-counter">1 / 4</span>
+</div>
+</div>
+<!-- 4 Mini Thumbnails -->
+<div class="grid grid-cols-4 gap-space-sm pt-1">
+<button class="thumb-btn aspect-square rounded-lg border-2 border-primary bg-primary-fixed shadow-[2px_2px_0px_#171717] overflow-hidden p-0.5 transition-all" onclick="selectThumb(0, this)">
+<img class="w-full h-full object-cover rounded-[5px]" data-alt="Thumbnail 1 of pastel lilac planner front cover with embossed golden foil calligraphy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd8Fq8CpA8XaQsk1fdzC3U5jer26okgZ6SUht-0hS4dsu703abWHR4kp6U9-N82IO8rCyJrL0e5fyYkH-BTlLbGypemhoMlUe3u0aTZwYhXsOuaxnCBjVaERVLICsKf2wokeMCA8oFOP9bhnU8EaZFRadrxPZGICk3qZSeIa8BSF5Rgzk_c4Jg7lzFymfYKij0JinnH_eImjNq5MsgXSPbfISFtGHTU8rFRx2kTA"/>
+</button>
+<button class="thumb-btn aspect-square rounded-lg border border-[#171717] bg-surface-container shadow-[2px_2px_0px_#171717] overflow-hidden p-0.5 opacity-80 hover:opacity-100 transition-all" onclick="selectThumb(1, this)">
+<img class="w-full h-full object-cover rounded-[5px]" data-alt="Thumbnail 2 showing 180 degree lay flat open view of smooth bullet grid page layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB59BzgqVOquzjLKEP559JjNJ33onnfutLrk2Y62tx6a0OyEoyZRn3WCZU6GRFo9WD0fBDoNsBiC3pTvki57KZpLQMh6XVWPJ1-iXOA6BL85hZhlGqPtlZpPdQTutN3T4CW4XVurjDK2muklbTAms_errRinWV_ff4rKA1suNSpDvsCDI2J4jYIo9oAyaHTz7-MKYisRu5Cc_PwyNwuQkanaXEJ9B1gVnaHuaKoFQ"/>
+</button>
+<button class="thumb-btn aspect-square rounded-lg border border-[#171717] bg-surface-container shadow-[2px_2px_0px_#171717] overflow-hidden p-0.5 opacity-80 hover:opacity-100 transition-all" onclick="selectThumb(2, this)">
+<img class="w-full h-full object-cover rounded-[5px]" data-alt="Thumbnail 3 showing spine binding and dual pastel purple ribbon bookmarks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuIH9yorbAAGV5BIqD-Q0SmWqddSYUKNQ_ue-pcH7wkGQMcbKEkMVD2lW0s6OgIyXxrNZ5Hv_ZfEj4RfX6OjsFnWyiiuil_k00-xULEr8a9vCX0M3butwR9bY1dGMPe_UJMiQf9_p54TUwBQKAR3onO9E8ZojU3ugsjSFLTkAaPPjZTepjDJ8zWrqUMnMfI38Z3Tig4f_GYw7hnpJPd-UpMK9FFWEloLlh1zZ8OQ"/>
+</button>
+<button class="thumb-btn aspect-square rounded-lg border border-[#171717] bg-surface-container shadow-[2px_2px_0px_#171717] overflow-hidden p-0.5 opacity-80 hover:opacity-100 transition-all" onclick="selectThumb(3, this)">
+<img class="w-full h-full object-cover rounded-[5px]" data-alt="Thumbnail 4 displaying bonus sticker sheets in cute pastel stationery themed illustrations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGWIYaA7D60ThSQX1ovS8sxjMjP7tB6L9SPzarBe7HEAIBiaVJdM-CizWuPjRiTtvA0A_NCAth54wZZLwzHrCOrFK18RnsbExKGcQ22G3WmOht8oyqr3lmn61IB5mwAe6cU30N_WRNqySqhAAqMPym4nKTwLzY030pl9m3nifotHTSv6X6l2mGpeUwu3S1LIAZXWGefVqTOGD8krSFnvHCE-bjzyGTkQqPXe66EA"/>
+</button>
+</div>
+</section>
+<!-- 2. Info Utama Produk -->
+<section class="flex flex-col gap-space-xs bg-surface-container-lowest p-space-md rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717]">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="text-label-md font-label-md text-primary font-bold uppercase tracking-wider">Notebooks &amp; Journal</span>
+<span class="bg-[#FFF066] text-[#171717] text-label-md font-label-md px-2.5 py-0.5 rounded-full border border-[#171717] shadow-[1.5px_1.5px_0px_#171717] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> FLASH SALE
+        </span>
+</div>
+<h1 class="font-fredoka text-headline-sm font-headline-sm text-on-surface leading-tight pt-1">
+        Pastel Cloud Daily Planner 2025 (Hardcover Undated Edition)
+      </h1>
+<!-- Rating & Social Proof -->
+<div class="flex items-center gap-2 pt-1 pb-1">
+<div class="flex items-center gap-1 text-[#caa82c]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">4.9</span>
+</div>
+<span class="text-[#171717]/40">•</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant font-semibold underline decoration-dotted">128 Ulasan</span>
+<span class="text-[#171717]/40">•</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Terjual 480+ pcs</span>
+</div>
+<!-- Price Breakdown Area -->
+<div class="flex items-baseline gap-space-sm pt-2">
+<span class="font-currency-price text-[26px] leading-8 font-black text-primary">Rp 68.000</span>
+<span class="text-body-sm font-body-sm line-through text-outline">Rp 85.000</span>
+<span class="bg-[#DCFCE7] text-[#166534] text-label-md font-label-md px-2 py-0.5 rounded-md border border-[#171717] shadow-[1.5px_1.5px_0px_#171717] font-bold">
+          Hemat Rp 17.000
+        </span>
+</div>
+<!-- Live Stock Badge -->
+<div class="flex items-center gap-2 mt-2 pt-2 border-t border-dashed border-[#171717]/20 text-body-sm font-body-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-[#22C55E] animate-pulse inline-block"></span>
+<span class="font-semibold text-on-surface">Stok Tersedia: <span class="font-bold text-secondary">24 pcs</span> (Siap kirim dari Bandung)</span>
+</div>
+</section>
+<!-- 3. Selector Varian -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex flex-col gap-space-md">
+<!-- Pilihan Warna Cover -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-title-md text-title-md text-on-surface font-bold">Warna Cover</label>
+<span class="text-label-md font-label-md text-primary font-bold" id="selected-color-name">Lilac Cloud</span>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<button aria-label="Pilih Lilac Cloud" class="color-swatch w-9 h-9 rounded-full bg-[#D8B4F8] border-2 border-[#171717] shadow-[2px_2px_0px_#171717] ring-2 ring-primary ring-offset-2 flex items-center justify-center transition-all" onclick="selectColor(this, 'Lilac Cloud')">
+<span class="material-symbols-outlined text-[16px] text-[#171717]">check</span>
+</button>
+<button aria-label="Pilih Butter Yellow" class="color-swatch w-9 h-9 rounded-full bg-[#FEF08A] border border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center transition-all" onclick="selectColor(this, 'Butter Yellow')">
+<span class="material-symbols-outlined text-[16px] text-[#171717] hidden">check</span>
+</button>
+<button aria-label="Pilih Baby Blue" class="color-swatch w-9 h-9 rounded-full bg-[#BAE6FD] border border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center transition-all" onclick="selectColor(this, 'Baby Blue')">
+<span class="material-symbols-outlined text-[16px] text-[#171717] hidden">check</span>
+</button>
+<button aria-label="Pilih Strawberry Milk" class="color-swatch w-9 h-9 rounded-full bg-[#FECDD3] border border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center transition-all" onclick="selectColor(this, 'Strawberry Milk')">
+<span class="material-symbols-outlined text-[16px] text-[#171717] hidden">check</span>
+</button>
+</div>
+</div>
+<!-- Jenis Isi Halaman -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-title-md text-title-md text-on-surface font-bold">Jenis Isi Halaman</label>
+<div class="flex flex-col gap-2 pt-1" id="variant-list">
+<label class="variant-option cursor-pointer p-3 rounded-xl border border-[#171717] bg-[#EDE7F6] shadow-[2px_2px_0px_#171717] flex items-center justify-between transition-all">
+<div class="flex items-center gap-2">
+<input checked="" class="accent-primary w-4 h-4" name="paper-type" onchange="updateVariant(this)" type="radio" value="Grid"/>
+<span class="font-body-md text-body-md font-bold text-on-surface">▦ Grid / Kotak-kotak</span>
+</div>
+<span class="text-label-md font-label-md text-secondary font-bold">Favorit 💖</span>
+</label>
+<label class="variant-option cursor-pointer p-3 rounded-xl border border-[#171717] bg-surface-container-lowest shadow-[2px_2px_0px_#171717] flex items-center justify-between hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-2">
+<input class="accent-primary w-4 h-4" name="paper-type" onchange="updateVariant(this)" type="radio" value="Dotted"/>
+<span class="font-body-md text-body-md font-semibold text-on-surface">⁖ Dotted / Titik-titik</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium">Untuk Bujo</span>
+</label>
+<label class="variant-option cursor-pointer p-3 rounded-xl border border-[#171717] bg-surface-container-lowest shadow-[2px_2px_0px_#171717] flex items-center justify-between hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-2">
+<input class="accent-primary w-4 h-4" name="paper-type" onchange="updateVariant(this)" type="radio" value="Lined"/>
+<span class="font-body-md text-body-md font-semibold text-on-surface">≡ Lined / Garis Klasik</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium">Rapi Menulis</span>
+</label>
+</div>
+</div>
+<!-- Quantity Stepper -->
+<div class="flex items-center justify-between pt-1 border-t border-dashed border-[#171717]/20">
+<div>
+<span class="font-title-md text-title-md text-on-surface font-bold block">Jumlah Pesanan</span>
+<span class="text-body-sm font-body-sm text-outline">Maks. 5 pcs per pesanan</span>
+</div>
+<div class="flex items-center border border-[#171717] rounded-xl bg-surface-container shadow-[2px_2px_0px_#171717] overflow-hidden">
+<button aria-label="Kurangi Jumlah" class="w-9 h-9 flex items-center justify-center text-on-surface hover:bg-surface-container-high active:bg-surface-container-highest transition-colors font-bold text-lg" onclick="adjustQty(-1)">
+            -
+          </button>
+<span class="w-10 text-center font-currency-price font-bold text-on-surface select-none" id="qty-display">1</span>
+<button aria-label="Tambah Jumlah" class="w-9 h-9 flex items-center justify-center text-on-surface hover:bg-surface-container-high active:bg-surface-container-highest transition-colors font-bold text-lg" onclick="adjustQty(1)">
+            +
+          </button>
+</div>
+</div>
+</section>
+<!-- 4. Tab Rincian (Deskripsi, Spesifikasi, Ulasan) -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex flex-col">
+<!-- Tab Header Buttons -->
+<div class="flex border-b border-[#171717] gap-2 pb-2">
+<button class="px-3 py-1.5 rounded-lg border border-[#171717] bg-primary text-on-primary shadow-[2px_2px_0px_#171717] text-label-lg font-label-lg font-bold transition-all" id="tab-btn-desc" onclick="switchTab('desc')">
+          Deskripsi
+        </button>
+<button class="px-3 py-1.5 rounded-lg border border-[#171717] bg-surface-container-low text-on-surface shadow-[1px_1px_0px_#171717] text-label-lg font-label-lg font-bold transition-all" id="tab-btn-spec" onclick="switchTab('spec')">
+          Spesifikasi
+        </button>
+<button class="px-3 py-1.5 rounded-lg border border-[#171717] bg-surface-container-low text-on-surface shadow-[1px_1px_0px_#171717] text-label-lg font-label-lg font-bold transition-all" id="tab-btn-rev" onclick="switchTab('rev')">
+          Ulasan (128)
+        </button>
+</div>
+<!-- Tab Content: Deskripsi -->
+<div class="flex flex-col gap-space-sm pt-4" id="tab-content-desc">
+<p class="text-body-md font-body-md text-on-surface leading-relaxed">
+          Teman setia mencatat resolusi harian, journal mingguan, hingga ide kreatif! Didesain khusus tanpa tanggal (undated) sehingga kamu bebas memulai kapan saja tanpa takut halaman terbuang sia-sia.
+        </p>
+<!-- Feature Points in Bento Grid-like styling -->
+<div class="grid grid-cols-2 gap-2 pt-2">
+<div class="p-3 bg-[#FBF7EE] border border-[#171717] rounded-lg shadow-[2px_2px_0px_#171717]">
+<span class="material-symbols-outlined text-[#725c00] text-[22px]">auto_stories</span>
+<h4 class="font-title-md text-[14px] font-bold text-on-surface mt-1">Bookpaper 100gsm</h4>
+<p class="text-body-sm font-body-sm text-outline mt-0.5">Tebal, tahan ghosting &amp; pen tinta basah.</p>
+</div>
+<div class="p-3 bg-[#EEF8FC] border border-[#171717] rounded-lg shadow-[2px_2px_0px_#171717]">
+<span class="material-symbols-outlined text-[#1b6b93] text-[22px]">menu_book</span>
+<h4 class="font-title-md text-[14px] font-bold text-on-surface mt-1">Buka Datar 180°</h4>
+<p class="text-body-sm font-body-sm text-outline mt-0.5">Jilid benang kuat, nyaman untuk tangan kiri &amp; kanan.</p>
+</div>
+<div class="p-3 bg-[#FDF0F5] border border-[#171717] rounded-lg shadow-[2px_2px_0px_#171717]">
+<span class="material-symbols-outlined text-secondary text-[22px]">bookmarks</span>
+<h4 class="font-title-md text-[14px] font-bold text-on-surface mt-1">Dual Ribbon</h4>
+<p class="text-body-sm font-body-sm text-outline mt-0.5">2 pita penanda satin warna pastel lembut.</p>
+</div>
+<div class="p-3 bg-[#F3EFFE] border border-[#171717] rounded-lg shadow-[2px_2px_0px_#171717]">
+<span class="material-symbols-outlined text-primary text-[22px]">redeem</span>
+<h4 class="font-title-md text-[14px] font-bold text-on-surface mt-1">Free Sticker Set</h4>
+<p class="text-body-sm font-body-sm text-outline mt-0.5">Bonus 2 lembar sticker kiyowo siap tempel!</p>
+</div>
+</div>
+</div>
+<!-- Tab Content: Spesifikasi (Hidden initially) -->
+<div class="hidden flex flex-col gap-2 pt-4" id="tab-content-spec">
+<div class="flex justify-between py-2 border-b border-[#171717]/10 text-body-sm font-body-sm">
+<span class="text-outline">Ukuran</span>
+<span class="font-bold text-on-surface">A5 (14.8 x 21 cm)</span>
+</div>
+<div class="flex justify-between py-2 border-b border-[#171717]/10 text-body-sm font-body-sm">
+<span class="text-outline">Jumlah Halaman</span>
+<span class="font-bold text-on-surface">192 Halaman (96 Lembar)</span>
+</div>
+<div class="flex justify-between py-2 border-b border-[#171717]/10 text-body-sm font-body-sm">
+<span class="text-outline">Cover</span>
+<span class="font-bold text-on-surface">Hardcover Matte Lamination + Foil</span>
+</div>
+<div class="flex justify-between py-2 border-b border-[#171717]/10 text-body-sm font-body-sm">
+<span class="text-outline">Asal Pengiriman</span>
+<span class="font-bold text-on-surface">Kota Bandung, Jawa Barat</span>
+</div>
+</div>
+<!-- Tab Content: Ulasan (Hidden initially) -->
+<div class="hidden flex flex-col gap-space-sm pt-4" id="tab-content-rev">
+<div class="p-3 bg-surface-container rounded-lg border border-[#171717] shadow-[2px_2px_0px_#171717] flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-[14px] font-bold text-on-surface">Nabila P. ✨</span>
+<span class="text-body-sm text-outline">2 hari lalu</span>
+</div>
+<div class="flex text-[#caa82c] text-sm">
+            ★★★★★
+          </div>
+<p class="text-body-sm font-body-sm text-on-surface">
+            "Kertasnya super tebal beneran nggak tembus dipakein brushpen! Foil emas di cover-nya estetik parah 💜✨"
+          </p>
+</div>
+</div>
+</section>
+<!-- 5. Rekomendasi "Kamu Mungkin Suka Juga" -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-fredoka text-headline-sm font-headline-sm text-on-surface">Kamu Mungkin Suka Juga ✨</h3>
+<a class="text-label-md font-label-md text-primary font-bold hover:underline" href="#more">Lihat Semua</a>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<!-- Rec Card 1 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex flex-col gap-2">
+<div class="relative w-full aspect-square bg-[#FEF08A]/30 rounded-lg border border-[#171717] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Mini pastel sticky note pastel pack with cloud shapes placed neatly on wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiXVUcnXrUcCt2g1STmbyxW2HdQp3Aa4Cb1bodNOYDDJH1q1S20TFQYp19hRqm5fdfOC5se51hKi7zc9ZL889iDZY_4815RmU6Byp2pI-NsreNEUxYr2rHHbRK2dlVgLYj5yNvm9nZn6LM9akb61Ul6jsDJTpHzwJBpwBU_NYiDC4uvh14NB93cEK_tVpE52sqb92t4ppgWGDlrXdekXKhx6t3NiMkyYmbYSVTBQ"/>
+<span class="absolute top-1.5 left-1.5 bg-[#FF8FB8] text-[#171717] text-[10px] font-bold px-1.5 py-0.5 rounded border border-[#171717]">Baru</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-[13px] font-bold text-on-surface truncate">Cloud Sticky Notes Memo</h4>
+<span class="font-currency-price text-body-md font-bold text-primary">Rp 14.500</span>
+</div>
+<button class="w-full py-1.5 bg-surface-container rounded-lg border border-[#171717] shadow-[2px_2px_0px_#171717] text-label-md font-bold text-on-surface active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all flex items-center justify-center gap-1" onclick="quickAdd('Cloud Sticky Notes')">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> + Keranjang
+          </button>
+</div>
+<!-- Rec Card 2 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex flex-col gap-2">
+<div class="relative w-full aspect-square bg-[#BAE6FD]/30 rounded-lg border border-[#171717] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Set of 5 pastel mild gel pens with soft rubber grip and cute cap clip on white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCtr_Gd85Uc7fm05qKsZZsKdSdH3l299qokaAX65w4gTpDdFjF4WLgaQDsIMozfMkhfusi7u1ZD7vPH6nLOSiViDddNz9TFzuMSXfKFavtBoQ8wd2mMusl76BUKflGpGklZkgFkWVtNZLYgw3GpeGNOGBfBhzyLhjQQw0o1ySUfgl8U-8f6IQUHdBQv7G_wNqWlHINvCGQXe9f8nKC-R7Fgf8EJ0n7e_zROSVOuw"/>
+<span class="absolute top-1.5 left-1.5 bg-[#FFF066] text-[#171717] text-[10px] font-bold px-1.5 py-0.5 rounded border border-[#171717]">Laris</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-md text-[13px] font-bold text-on-surface truncate">Gel Pen Set Pastel 0.5mm</h4>
+<span class="font-currency-price text-body-md font-bold text-primary">Rp 28.000</span>
+</div>
+<button class="w-full py-1.5 bg-surface-container rounded-lg border border-[#171717] shadow-[2px_2px_0px_#171717] text-label-md font-bold text-on-surface active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all flex items-center justify-center gap-1" onclick="quickAdd('Gel Pen Set')">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> + Keranjang
+          </button>
+</div>
+</div>
+</section>
+</div>
+<!-- 6. Fixed / Sticky Bottom Bar with Tactile Neobrutalist Action Buttons -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md border-t-2 border-[#171717] shadow-[0_-4px_12px_rgba(0,0,0,0.06)] px-margin py-3 pb-safe">
+<div class="flex items-center gap-space-sm justify-between max-w-lg mx-auto">
+<!-- Subtotal Price Left -->
+<div class="flex flex-col min-w-0">
+<span class="text-body-sm font-body-sm text-outline">Total Harga</span>
+<span class="font-currency-price text-headline-sm font-black text-primary truncate" id="subtotal-price">Rp 68.000</span>
+</div>
+<!-- Button CTAs Right -->
+<div class="flex items-center gap-2 flex-1 max-w-[240px] justify-end">
+<!-- + Keranjang Button -->
+<button aria-label="Tambah ke keranjang" class="flex-1 py-2.5 px-2 bg-surface-container-lowest text-on-surface border border-[#171717] rounded-lg shadow-[3px_3px_0px_#171717] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all text-center flex items-center justify-center gap-1 font-title-md text-[13px] font-bold" onclick="addToCart()">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>+ Keranjang</span>
+</button>
+<!-- ⚡ Beli Sekarang Button -->
+<button aria-label="Beli Sekarang" class="flex-1 py-2.5 px-2 bg-[#FF8FB8] text-[#171717] border border-[#171717] rounded-lg shadow-[3px_3px_0px_#171717] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all text-center flex items-center justify-center gap-1 font-title-md text-[13px] font-bold" onclick="buyNow()">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Beli</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentQty = 1;
+  const unitPrice = 68000;
+  let isWishlisted = false;
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast-wishlist');
+    const toastText = document.getElementById('toast-text');
+    if (toast && toastText) {
+      toastText.innerText = msg;
+      toast.classList.remove('opacity-0', 'translate-y-[-8px]');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-[-8px]');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2200);
+    }
+  }
+
+  function adjustQty(change) {
+    const newQty = currentQty + change;
+    if (newQty >= 1 && newQty <= 5) {
+      currentQty = newQty;
+      document.getElementById('qty-display').innerText = currentQty;
+      const total = unitPrice * currentQty;
+      document.getElementById('subtotal-price').innerText = 'Rp ' + total.toLocaleString('id-ID');
+    }
+  }
+
+  function selectThumb(index, btn) {
+    document.querySelectorAll('.thumb-btn').forEach(b => {
+      b.classList.remove('border-2', 'border-primary', 'bg-primary-fixed');
+      b.classList.add('border', 'border-[#171717]', 'bg-surface-container', 'opacity-80');
+    });
+    btn.classList.remove('border-[#171717]', 'opacity-80');
+    btn.classList.add('border-2', 'border-primary', 'bg-primary-fixed');
+    document.getElementById('gallery-counter').innerText = (index + 1) + ' / 4';
+    
+    // Quick zoom pulse effect on main image to simulate photo switch
+    const mainImg = document.getElementById('main-product-img');
+    mainImg.classList.add('scale-95', 'opacity-80');
+    setTimeout(() => {
+      mainImg.classList.remove('scale-95', 'opacity-80');
+    }, 150);
+  }
+
+  function selectColor(btn, colorName) {
+    document.querySelectorAll('.color-swatch').forEach(sw => {
+      sw.classList.remove('ring-2', 'ring-primary', 'ring-offset-2', 'border-2');
+      sw.classList.add('border');
+      const checkIcon = sw.querySelector('span');
+      if (checkIcon) checkIcon.classList.add('hidden');
+    });
+    btn.classList.add('ring-2', 'ring-primary', 'ring-offset-2', 'border-2');
+    btn.classList.remove('border');
+    const activeCheck = btn.querySelector('span');
+    if (activeCheck) activeCheck.classList.remove('hidden');
+    document.getElementById('selected-color-name').innerText = colorName;
+  }
+
+  function updateVariant(radio) {
+    document.querySelectorAll('.variant-option').forEach(el => {
+      el.classList.remove('bg-[#EDE7F6]');
+      el.classList.add('bg-surface-container-lowest');
+    });
+    radio.closest('.variant-option').classList.add('bg-[#EDE7F6]');
+  }
+
+  function switchTab(tab) {
+    const tabs = ['desc', 'spec', 'rev'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-btn-' + t);
+      const content = document.getElementById('tab-content-' + t);
+      if (t === tab) {
+        btn.className = "px-3 py-1.5 rounded-lg border border-[#171717] bg-primary text-on-primary shadow-[2px_2px_0px_#171717] text-label-lg font-label-lg font-bold transition-all";
+        content.classList.remove('hidden');
+      } else {
+        btn.className = "px-3 py-1.5 rounded-lg border border-[#171717] bg-surface-container-low text-on-surface shadow-[1px_1px_0px_#171717] text-label-lg font-label-lg font-bold transition-all";
+        content.classList.add('hidden');
+      }
+    });
+  }
+
+  function toggleWishlist() {
+    isWishlisted = !isWishlisted;
+    const icon = document.getElementById('icon-wishlist');
+    if (isWishlisted) {
+      icon.innerText = 'favorite';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.add('text-secondary');
+      showToast('Tersimpan di Wishlist kamu! 💖');
+    } else {
+      icon.innerText = 'favorite_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-secondary');
+      showToast('Dihapus dari Wishlist');
+    }
+  }
+
+  function previewZoom() {
+    showToast('Sentuh 2x untuk memperbesar detail gambar 🔍');
+  }
+
+  function addToCart() {
+    showToast('✨ ' + currentQty + 'x Planner dimasukkan ke keranjang!');
+  }
+
+  function buyNow() {
+    showToast('Mengarahkan ke checkout pesanan... 🛍️');
+  }
+
+  function quickAdd(item) {
+    showToast('Ditambahkan: ' + item + ' 💕');
+  }
+</script></main></body></html>

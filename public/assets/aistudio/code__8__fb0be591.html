@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MayurienShop</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700;800&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'primary': '#674ba7', 'tertiary-fixed-dim': '#e8c346', 'tertiary-fixed': '#ffe081', 'on-tertiary': '#ffffff', 'on-secondary-container': '#792248', 'tertiary': '#725c00', 'surface-container-low': '#f6f3f2', 'on-secondary-fixed': '#3e001f', 'on-primary-fixed': '#24005b', 'inverse-primary': '#d1bcff', 'secondary-fixed-dim': '#ffb0ca', 'on-tertiary-fixed-variant': '#564500', 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#513490', 'on-surface': '#1c1b1b', 'secondary': '#9b3e64', 'secondary-container': '#fe8eb7', 'inverse-surface': '#313030', 'on-secondary-fixed-variant': '#7d264c', 'on-secondary': '#ffffff', 'on-tertiary-fixed': '#231b00', 'surface-bright': '#fcf9f8', 'primary-fixed': '#eaddff', 'error': '#ba1a1a', 'surface-container-highest': '#e5e2e1', 'on-primary-container': '#fffbff', 'outline': '#7a7582', 'on-background': '#1c1b1b', 'secondary-fixed': '#ffd9e3', 'on-error-container': '#93000a', 'primary-fixed-dim': '#d1bcff', 'surface-container': '#f0eded', 'primary-container': '#8064c2', 'on-error': '#ffffff', 'on-primary': '#ffffff', 'surface-container-high': '#eae7e7', 'background': '#fcf9f8', 'outline-variant': '#cbc4d3', 'tertiary-container': '#caa82c', 'on-tertiary-container': '#4e3e00', 'error-container': '#ffdad6', 'surface-dim': '#dcd9d9', 'surface': '#fcf9f8', 'inverse-on-surface': '#f3f0ef', 'surface-variant': '#e5e2e1', 'surface-tint': '#6a4da9', 'on-surface-variant': '#494551' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-lg': '1.5rem', 'margin-tablet': '2rem', 'margin': '1rem', 'space-xs': '0.25rem', 'space-sm': '0.5rem', 'space-xl': '2.5rem', 'margin-desktop': '3rem', 'gutter-desktop': '1.5rem', 'space-md': '1rem', 'gutter': '1rem' }, fontFamily: { 'currency-price': ['Nunito Sans'], 'body-lg': ['Nunito Sans'], 'display-hero-mobile': ['Quicksand'], 'label-lg': ['Nunito Sans'], 'headline-lg-mobile': ['Quicksand'], 'title-md': ['Quicksand'], 'body-sm': ['Nunito Sans'], 'headline-sm': ['Quicksand'], 'display-hero': ['Quicksand'], 'body-md': ['Nunito Sans'], 'headline-lg': ['Quicksand'], 'headline-md': ['Quicksand'], 'label-md': ['Nunito Sans'], 'fredoka': ['Fredoka', 'sans-serif'] }, fontSize: { 'currency-price': ['16px', { lineHeight: '22px', letterSpacing: '0.01em', fontWeight: '800' }], 'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }], 'display-hero-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.02em', fontWeight: '700' }], 'headline-lg-mobile': ['24px', { lineHeight: '32px', fontWeight: '700' }], 'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'display-hero': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }], 'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.03em', fontWeight: '700' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="font-fredoka text-headline-sm text-primary tracking-tight font-bold">Mayurien<span class="text-secondary font-fredoka">Shop</span></span></div><div class="flex items-center gap-space-xs"><button aria-label="Pencarian" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">search</span></button><button aria-label="Ubah Tema" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-tertiary transition-colors"><span class="material-symbols-outlined text-[24px]">light_mode</span></button><a aria-label="Keranjang Belanja" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" data-path="keranjang" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1 right-1 w-5 h-5 bg-secondary text-on-secondary rounded-full flex items-center justify-center text-[11px] font-bold font-currency-price">3</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Search & Quick Action Controls -->
+<section class="px-margin pt-space-sm pb-space-xs flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-3.5 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-xl shadow-[2px_2px_0px_#171717] outline-none transition-all placeholder:text-outline focus:shadow-[3px_3px_0px_#171717]" placeholder="Cari binder, pensil, washi tape..." style="border: 1px solid #171717;" type="text"/>
+</div>
+<button class="h-11 px-3.5 bg-surface-container-lowest text-on-surface rounded-xl flex items-center justify-center gap-1.5 shadow-[2px_2px_0px_#171717] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="font-label-md text-label-md">Filter</span>
+<span class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold flex items-center justify-center font-currency-price shadow-[1px_1px_0px_#171717]" style="border: 1px solid #171717;">3</span>
+</button>
+</div>
+<!-- Dropdown Sort Strip -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim" style="border: 1px solid #171717;"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Urutkan:</span>
+</div>
+<button class="h-8 px-3 bg-surface-container-lowest text-on-surface rounded-lg flex items-center gap-1.5 shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all font-label-md text-label-md" style="border: 1px solid #171717;" type="button">
+<span>Paling Populer</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</section>
+<!-- Horizontal Scroll Filter Chips -->
+<section class="w-full overflow-x-auto no-scrollbar py-2 px-margin flex items-center gap-2">
+<button class="shrink-0 h-8 px-3.5 bg-primary text-on-primary rounded-full flex items-center gap-1.5 font-label-md text-label-md shadow-[2px_2px_0px_#171717] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+<span>Semua Kategori</span>
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+<button class="shrink-0 h-8 px-3.5 bg-surface-container-lowest text-on-surface rounded-full flex items-center gap-1.5 font-label-md text-label-md shadow-[2px_2px_0px_#171717] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+<span>&lt; Rp 100.000</span>
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+<button class="shrink-0 h-8 px-3.5 bg-surface-container-lowest text-on-surface rounded-full flex items-center gap-1.5 font-label-md text-label-md shadow-[2px_2px_0px_#171717] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Rating 4.5+</span>
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+<button class="shrink-0 h-8 px-3.5 bg-surface-container-lowest text-on-surface rounded-full flex items-center gap-1.5 font-label-md text-label-md shadow-[2px_2px_0px_#171717] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>Ready Stock</span>
+</button>
+</section>
+<!-- Catalog Header & Motivation Tagline -->
+<section class="px-margin pt-space-sm pb-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight">Katalog Lengkap</h1>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">(48)</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-fredoka text-[11px] font-bold uppercase tracking-wider shadow-[2px_2px_0px_#171717] shrink-0" style="border: 1px solid #171717;">
+        ✨ 100% Kawaii
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+      Koleksi stationery pilihan estetik, dijamin orisinal &amp; gemas ✨
+    </p>
+</section>
+<!-- 2-Column Product Grid -->
+<section class="px-margin pt-space-xs grid grid-cols-2 gap-3.5">
+<!-- Product 1 -->
+<article class="bg-surface-container-lowest rounded-xl flex flex-col justify-between overflow-hidden shadow-[3px_3px_0px_#171717] relative group" style="border: 1px solid #171717;">
+<div>
+<div class="relative w-full aspect-square bg-[#F7F3FB] overflow-hidden" style="border-bottom: 1px solid #171717;">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Aesthetic pastel cloud pattern daily planner book resting flat on a warm desk, accompanied by minimal stationery accessories, studio lighting with soft playful shadows in lilac, blush, and cream palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnJRQJAwH90xPsmVwcgmMjQbaeVUEcetxnLR0moVyHUXPxO_CVafzzBGxVygpoJ7ItPLKfvkky7qZoFeJLUPPLMhJ-nm6rxgNr7K1juLklhDfzyGZMGnrXHgHoXI49MqSqYw8WZaD7-WWRpkzFU42MnPKsdsmr83JfzvDEeRktMDWjNbA9WM9Z8XTRbsO3LD2SlBltuE6-Lvjej6uI_gq4GmwmzPlITFRVuEGgw"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-currency-price text-[11px] font-extrabold shadow-[1.5px_1.5px_0px_#171717]" style="border: 1px solid #171717;">
+            -20%
+          </span>
+<button aria-label="Wishlist Pastel Cloud Daily Planner" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:scale-90 transition-transform" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-price text-[12px] font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(128)</span>
+</div>
+<h2 class="font-title-md text-[13px] leading-tight font-bold text-on-surface line-clamp-2 min-w-0">
+            Pastel Cloud Daily Planner 2025
+          </h2>
+</div>
+</div>
+<div class="px-2.5 pb-2.5 pt-0 flex items-end justify-between gap-1">
+<div>
+<span class="block font-currency-price text-currency-price text-primary">Rp 68.000</span>
+<span class="block font-body-sm text-[11px] text-outline line-through">Rp 85.000</span>
+</div>
+<button aria-label="Tambah ke keranjang" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all shrink-0" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Product 2 -->
+<article class="bg-surface-container-lowest rounded-xl flex flex-col justify-between overflow-hidden shadow-[3px_3px_0px_#171717] relative group" style="border: 1px solid #171717;">
+<div>
+<div class="relative w-full aspect-square bg-[#FDF8E8] overflow-hidden" style="border-bottom: 1px solid #171717;">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Vintage Morandi color aesthetic gel pens in a neat pack of 5, subtle matte pastel barrel finishes, arranged cleanly on clean textured craft paper background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiCMW5MCFYMldun9FJeJbl9t-y0zZ5ohpvB4bGjCxL2yiJRBZaNyvKvs_ZAed_WUDH862XPUi_vvc0y8DfJDTf6Ak9YTvh2Ga9ZJAh2RXU-GooMymgqEEznfYUNDbey45wVJ70t1njbOE2bOFjg1K5S73d-B9iTdxoFcPFBWvMeCymgH0cQtIJAWJPHhd2GjO_4bu-wOr-3YDeHmqQub6vu7hwCDziEFvy5CTUCQ"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-currency-price text-[11px] font-extrabold shadow-[1.5px_1.5px_0px_#171717]" style="border: 1px solid #171717;">
+            Terlaris
+          </span>
+<button aria-label="Wishlist Vintage Morandi Gel Pen Set" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:scale-90 transition-transform" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-price text-[12px] font-bold text-on-surface">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(250)</span>
+</div>
+<h2 class="font-title-md text-[13px] leading-tight font-bold text-on-surface line-clamp-2 min-w-0">
+            Vintage Morandi Gel Pen Set (5 pcs)
+          </h2>
+</div>
+</div>
+<div class="px-2.5 pb-2.5 pt-0 flex items-end justify-between gap-1">
+<div>
+<span class="block font-currency-price text-currency-price text-primary">Rp 38.500</span>
+</div>
+<button aria-label="Tambah ke keranjang" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all shrink-0" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Product 3 -->
+<article class="bg-surface-container-lowest rounded-xl flex flex-col justify-between overflow-hidden shadow-[3px_3px_0px_#171717] relative group" style="border: 1px solid #171717;">
+<div>
+<div class="relative w-full aspect-square bg-[#FDF0F4] overflow-hidden" style="border-bottom: 1px solid #171717;">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Clear modern 3 tier acrylic desk stationery organizer with small cute drawer compartments filled with washi tapes and stickers, bathed in warm bright desk lamp light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kqHgXCu6qG4f7Vh0z4fKWrBtQCYfd1x6uAhqF-Tcnp6za2A00NDM4r6XfzqQJMA9V3DNdsH9VB6HEfupbripWT7eqyCRnoXwkCNQ1O8iC1emIMYm-7Fz2Wb2--v40k7Ui7fR2_oPlHi-NudwsE6G3Y6y8AXaaFl_GuBQyViP4118SuiuS0MohQoWee8D_rt4ZTxCS_V3bN4gqFUFRtwBdyTlGPWO8fNu9Y6kiQ"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-currency-price text-[11px] font-extrabold shadow-[1.5px_1.5px_0px_#171717]" style="border: 1px solid #171717;">
+            Populer
+          </span>
+<button aria-label="Wishlist Acrylic Desk Organizer" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:scale-90 transition-transform" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-price text-[12px] font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(89)</span>
+</div>
+<h2 class="font-title-md text-[13px] leading-tight font-bold text-on-surface line-clamp-2 min-w-0">
+            Aesthetic Acrylic Desk Organizer 3 Tier
+          </h2>
+</div>
+</div>
+<div class="px-2.5 pb-2.5 pt-0 flex items-end justify-between gap-1">
+<div>
+<span class="block font-currency-price text-currency-price text-primary">Rp 89.000</span>
+</div>
+<button aria-label="Tambah ke keranjang" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all shrink-0" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Product 4 -->
+<article class="bg-surface-container-lowest rounded-xl flex flex-col justify-between overflow-hidden shadow-[3px_3px_0px_#171717] relative group" style="border: 1px solid #171717;">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F8] overflow-hidden" style="border-bottom: 1px solid #171717;">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Cute teddy bear shaped soft silicone cable winder clip holding a pastel phone charging cable on a minimal tabletop, whimsical kawaii aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuC95yFEmtdDqRNUSOLToynv0gVcmbwrwO8DARJ95b_FTwsmB8fdcyXPdvV-CROv1RqxhZr5_mnlmexbiuC-bopNjQKK7JQUErF8kM3THI56afE98BV702G1uPOSLv6S-tgh6aQ0gipngnD79ZTCwWsll30A7F6B5pEdxl0eAo9JnM_doKvs4WXugtZhiWFqinj-FssDz3qGsNXnVu_JQqoGP0VA0cYALJ1KOOog"/>
+<button aria-label="Wishlist Silicone Cable Winder" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:scale-90 transition-transform" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-price text-[12px] font-bold text-on-surface">4.7</span>
+<span class="font-body-sm text-body-sm text-outline">(64)</span>
+</div>
+<h2 class="font-title-md text-[13px] leading-tight font-bold text-on-surface line-clamp-2 min-w-0">
+            Cute Bear Silicone Cable Winder Clip
+          </h2>
+</div>
+</div>
+<div class="px-2.5 pb-2.5 pt-0 flex items-end justify-between gap-1">
+<div>
+<span class="block font-currency-price text-currency-price text-primary">Rp 18.000</span>
+</div>
+<button aria-label="Tambah ke keranjang" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all shrink-0" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Product 5 -->
+<article class="bg-surface-container-lowest rounded-xl flex flex-col justify-between overflow-hidden shadow-[3px_3px_0px_#171717] relative group" style="border: 1px solid #171717;">
+<div>
+<div class="relative w-full aspect-square bg-[#EEF5FF] overflow-hidden" style="border-bottom: 1px solid #171717;">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Macaron colored compact correction tape applicator cute stationery tool with soft mint and baby pink body on clean pastel background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqaoAHPCrIW1gs4JhgGYnl6Dpu5-BkPTEO_ika_85vJ61dTd15nh-ZDJrJ3bUEy7gR-z4S22qB9p8tCHKi60R4V_l29xDj5oiox4csC_ttiOGvglIrn40QUHfHnR0jriCx9FmA9VeOGXI5tqtu6wZA4uxvtHUbJ9gFHQ1iF4VBMhoLAOv2UqkiwxSmGG1qZOu1DgDCBt_FpMcIoAEZnERkKQjKZ1k_8t5w3NDJSw"/>
+<button aria-label="Wishlist Macaron Correction Tape" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:scale-90 transition-transform" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-price text-[12px] font-bold text-on-surface">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(310)</span>
+</div>
+<h2 class="font-title-md text-[13px] leading-tight font-bold text-on-surface line-clamp-2 min-w-0">
+            Macaron Pastel Correction Tape 5mm
+          </h2>
+</div>
+</div>
+<div class="px-2.5 pb-2.5 pt-0 flex items-end justify-between gap-1">
+<div>
+<span class="block font-currency-price text-currency-price text-primary">Rp 15.500</span>
+</div>
+<button aria-label="Tambah ke keranjang" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all shrink-0" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Product 6 -->
+<article class="bg-surface-container-lowest rounded-xl flex flex-col justify-between overflow-hidden shadow-[3px_3px_0px_#171717] relative group" style="border: 1px solid #171717;">
+<div>
+<div class="relative w-full aspect-square bg-[#FDF3E7] overflow-hidden" style="border-bottom: 1px solid #171717;">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Illustrated dreamy starry hardcover diary notebook with gold foil lettering accents, nestled beside dry floral petals on neutral backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAegdFwu-KsQjfLHxSjZk8yiWvK-qAJh4rpe5jrDhj0iTi9kpgxcMrE64ukrv8gXYv9Z0wSond8yiYrEb54JaUwFnIjEyuphJsFXCEKbmBmjBNcwavKQRGtU503etAlpCiws9TpqmAu_U0N6wGu69n1XPOoLu3eLSaX7I8gOreWSmY5cBGw79eyzv1mKDmFfnDKm_oWVjDJ323ueHSKSJch3IOEABjOcm7kfn3-yw"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-currency-price text-[11px] font-extrabold shadow-[1.5px_1.5px_0px_#171717]" style="border: 1px solid #171717;">
+            Spesial
+          </span>
+<button aria-label="Wishlist Hardcover Starlight Diary" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:scale-90 transition-transform" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-price text-[12px] font-bold text-on-surface">5.0</span>
+<span class="font-body-sm text-body-sm text-outline">(42)</span>
+</div>
+<h2 class="font-title-md text-[13px] leading-tight font-bold text-on-surface line-clamp-2 min-w-0">
+            Illustrated Hardcover Starlight Diary
+          </h2>
+</div>
+</div>
+<div class="px-2.5 pb-2.5 pt-0 flex items-end justify-between gap-1">
+<div>
+<span class="block font-currency-price text-currency-price text-primary">Rp 75.000</span>
+</div>
+<button aria-label="Tambah ke keranjang" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all shrink-0" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Product 7 -->
+<article class="bg-surface-container-lowest rounded-xl flex flex-col justify-between overflow-hidden shadow-[3px_3px_0px_#171717] relative group" style="border: 1px solid #171717;">
+<div>
+<div class="relative w-full aspect-square bg-[#F7F2FA] overflow-hidden" style="border-bottom: 1px solid #171717;">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Retro aesthetic multi-zipper canvas pencil case pouch filled with colorful pens and ruler, sitting upright on a wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM59PoujRhidYx76XRbZ12Ah3un4LIaTvd075LFeNZy1DfO35TbnIHGniAgZ6_FISKvjJVWvZlglBkxua33m_VLhtJrt4QIUMsX00fsIqPIFcrOocr9DZqzNwZuXjcAHV66CVNvitBQHuVXTZiw8tCdwtJ1MJfi7Ueip-t9iYvFLthCNRzqjUiD87Ab1zkgvKjqV-O4JFJa_EIdL2msGERcNYKfwkwSe4PUmQcbA"/>
+<button aria-label="Wishlist Multi-Zipper Pouch" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:scale-90 transition-transform" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-price text-[12px] font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(112)</span>
+</div>
+<h2 class="font-title-md text-[13px] leading-tight font-bold text-on-surface line-clamp-2 min-w-0">
+            Retro Aesthetic Multi-Zipper Pouch
+          </h2>
+</div>
+</div>
+<div class="px-2.5 pb-2.5 pt-0 flex items-end justify-between gap-1">
+<div>
+<span class="block font-currency-price text-currency-price text-primary">Rp 42.000</span>
+</div>
+<button aria-label="Tambah ke keranjang" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all shrink-0" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Product 8 -->
+<article class="bg-surface-container-lowest rounded-xl flex flex-col justify-between overflow-hidden shadow-[3px_3px_0px_#171717] relative group" style="border: 1px solid #171717;">
+<div>
+<div class="relative w-full aspect-square bg-[#FDF8E8] overflow-hidden" style="border-bottom: 1px solid #171717;">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Pack of 6 aesthetic pastel chisel tip highlighters in soft shades of lemon, peach, mint, lavender, and sky blue laid out on an open study notebook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtxa7-mQ66HenHHdArm7wOviKNczHVQrSaIZihK3MJp4h-1PjfvWF8xnT3Ov7CXK1_Ph4TMgNnq0G39jLxqBmfga66eARuoREk15AtZxWPunEzJHu6HaEGTsSGELrueWqDleRBGBY-3vYc8LuZLeVBF23bCBL0TW-eflycyRi-dTFW7PmfNJJfhT9ruYTTgmu-WKfxMe8EHtLpPWZUUK7WdNsSzeeLUb8q_yyxlw"/>
+<button aria-label="Wishlist Pastel Highlighter Set" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:scale-90 transition-transform" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-price text-[12px] font-bold text-on-surface">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(184)</span>
+</div>
+<h2 class="font-title-md text-[13px] leading-tight font-bold text-on-surface line-clamp-2 min-w-0">
+            Pastel Highlighter Chisel (Set 6 Warna)
+          </h2>
+</div>
+</div>
+<div class="px-2.5 pb-2.5 pt-0 flex items-end justify-between gap-1">
+<div>
+<span class="block font-currency-price text-currency-price text-primary">Rp 34.000</span>
+</div>
+<button aria-label="Tambah ke keranjang" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all shrink-0" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Tactile Neobrutalist Pagination -->
+<section class="px-margin pt-space-lg flex items-center justify-center gap-2">
+<button class="w-10 h-10 rounded-xl bg-surface-container text-outline flex items-center justify-center opacity-60 cursor-not-allowed" disabled="" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary font-currency-price text-currency-price flex items-center justify-center shadow-[3px_3px_0px_#171717] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+      1
+    </button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest text-on-surface font-currency-price text-currency-price flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+      2
+    </button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest text-on-surface font-currency-price text-currency-price flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+      3
+    </button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest text-on-surface font-currency-price text-currency-price flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+      4
+    </button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all" style="border: 1px solid #171717;" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</section>
+<!-- Friendly Help Banner -->
+<section class="px-margin pt-space-lg">
+<div class="p-4 rounded-xl bg-[#F6EFFE] relative overflow-hidden shadow-[4px_4px_0px_#171717] flex items-center justify-between gap-3" style="border: 1px solid #171717;">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-fredoka text-[14px] text-primary font-bold">Butuh Bantuan?</span>
+<span class="text-[14px]">🌸</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+          Belum nemu yang dicari? Min-Mayu siap bantu cari stationery impianmu!
+        </p>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary-fixed text-on-primary-fixed font-currency-price text-[13px] font-bold shadow-[2px_2px_0px_#171717] active:translate-x-[1.5px] active:translate-y-[1.5px] active:shadow-none transition-all flex items-center gap-1 shrink-0" style="border: 1px solid #171717;" type="button">
+<span>Chat</span>
+<span class="text-[14px]">💬</span>
+</button>
+</div>
+</section>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="beranda" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-md text-label-md mt-0.5">Beranda</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] py-1 transition-all text-primary font-bold" data-path="katalog" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-md text-label-md mt-0.5">Katalog</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all relative" data-path="keranjang" href="#"><span class="material-symbols-outlined text-[22px]">local_mall</span><span class="font-label-md text-label-md mt-0.5">Keranjang</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="akun" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-md text-label-md mt-0.5">Akun</span></a></div></nav></body></html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>MayurienShop - Pesanan Berhasil!</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .font-fredoka {
+      font-family: 'Fredoka', 'Quicksand', sans-serif;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed-dim": "#d1bcff",
+            "primary-container": "#8064c2",
+            "surface-container-low": "#f6f3f2",
+            "on-surface-variant": "#494551",
+            "outline": "#7a7582",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#e5e2e1",
+            "tertiary": "#725c00",
+            "secondary-fixed-dim": "#ffb0ca",
+            "surface-container-lowest": "#ffffff",
+            "surface-bright": "#fcf9f8",
+            "secondary": "#9b3e64",
+            "surface": "#fcf9f8",
+            "inverse-surface": "#313030",
+            "primary-fixed": "#eaddff",
+            "on-primary-fixed-variant": "#513490",
+            "on-tertiary-container": "#4e3e00",
+            "on-secondary-fixed-variant": "#7d264c",
+            "tertiary-container": "#caa82c",
+            "on-error": "#ffffff",
+            "surface-container-high": "#eae7e7",
+            "outline-variant": "#cbc4d3",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#e8c346",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "surface-dim": "#dcd9d9",
+            "surface-container": "#f0eded",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1c1b1b",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f3f0ef",
+            "surface-variant": "#e5e2e1",
+            "on-tertiary-fixed": "#231b00",
+            "on-secondary-container": "#792248",
+            "secondary-fixed": "#ffd9e3",
+            "on-tertiary-fixed-variant": "#564500",
+            "primary": "#674ba7",
+            "surface-tint": "#6a4da9",
+            "background": "#fcf9f8",
+            "on-surface": "#1c1b1b",
+            "on-primary-container": "#fffbff",
+            "on-primary-fixed": "#24005b",
+            "inverse-primary": "#d1bcff",
+            "on-secondary-fixed": "#3e001f",
+            "secondary-container": "#fe8eb7",
+            "tertiary-fixed": "#ffe081"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "1rem",
+            "margin-tablet": "2rem",
+            "margin-desktop": "3rem",
+            "gutter": "1rem",
+            "gutter-desktop": "1.5rem"
+          },
+          fontFamily: {
+            "body-lg": ["Nunito Sans", "sans-serif"],
+            "body-md": ["Nunito Sans", "sans-serif"],
+            "body-sm": ["Nunito Sans", "sans-serif"],
+            "label-lg": ["Nunito Sans", "sans-serif"],
+            "label-md": ["Nunito Sans", "sans-serif"],
+            "currency-price": ["Nunito Sans", "sans-serif"],
+            "headline-lg": ["Quicksand", "sans-serif"],
+            "headline-md": ["Quicksand", "sans-serif"],
+            "headline-sm": ["Quicksand", "sans-serif"],
+            "title-md": ["Quicksand", "sans-serif"],
+            "display-hero": ["Quicksand", "sans-serif"],
+            "display-hero-mobile": ["Quicksand", "sans-serif"]
+          },
+          fontSize: {
+            "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }],
+            "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }],
+            "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.03em", fontWeight: "700" }],
+            "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "700" }],
+            "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+            "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+            "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "display-hero": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "currency-price": ["16px", { lineHeight: "22px", letterSpacing: "0.01em", fontWeight: "800" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col">
+<!-- TOP HEADER WITH ANNOUNCEMENT BAR (Identical to SCREEN_41) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<!-- Announcement Bar -->
+<div class="w-full bg-tertiary-fixed text-on-tertiary-fixed py-1.5 px-4 text-center font-label-md text-label-md flex items-center justify-center gap-space-sm border-b border-black/5">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>Gratis Ongkir se-Indonesia untuk pesanan di atas Rp 150.000! Gunakan kode: <strong class="underline font-label-lg text-label-lg">GEMAS</strong></span>
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</div>
+<!-- Main Navigation Bar -->
+<div class="h-20 w-full max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-gutter">
+<!-- Logo + Nav Links -->
+<div class="flex items-center gap-space-lg flex-shrink-0">
+<a class="flex items-center gap-space-sm group" data-path="home" href="#">
+<img alt="MayurienShop Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBhE-TB90t7loSGvOLIcp0MpPoUvFM18g6FNDe8swQUBJYpc7AvcuGLECJcSf_K5lULReyFwItV7PhpYvolSGi-jQ05p8EB11Ao0YntVhUWgNMlJreJ1qyiVwvL5xNYrQfbvkkcnj9yyDEMyx5-NO93fWdWTq3HArJgeXn95HHN9NlPHfsNB02xOX8LIe-9FD_VNoBfNyc7JxZHZBJLXnRdhsrl8Q6vnETFkK5VLw"/>
+<div class="flex flex-col">
+<span class="font-fredoka text-[22px] font-bold text-primary group-hover:text-primary-container transition-colors tracking-tight leading-none">MayurienShop</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none mt-0.5">Little Things, Big Happiness!</span>
+</div>
+</a>
+<nav class="hidden lg:flex items-center gap-space-sm">
+<a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="home" href="#">Home</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="product-catalog" href="#">Shop</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="categories" href="#">Categories</a>
+</nav>
+</div>
+<!-- Search Input Pill -->
+<div class="hidden md:flex flex-1 max-w-md mx-space-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-space-md py-space-sm bg-surface-container-lowest text-on-surface rounded-full border border-on-surface/20 shadow-[2px_2px_0px_#1c1b1b] focus:outline-none focus:ring-2 focus:ring-primary font-body-md text-body-md placeholder:text-outline placeholder:font-body-sm transition-all" placeholder="Cari notebook aesthetic, pen pastel, stiker..." type="text"/>
+</div>
+</div>
+<!-- Header Action Buttons -->
+<div class="flex items-center gap-space-sm sm:gap-space-md flex-shrink-0">
+<button aria-label="Toggle Dark Mode" class="h-10 w-10 flex items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface border border-on-surface shadow-[2px_2px_0px_#1c1b1b] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">light_mode</span>
+</button>
+<a class="h-10 px-space-md flex items-center gap-space-sm rounded-lg bg-surface-container-lowest text-on-surface border border-on-surface shadow-[2px_2px_0px_#1c1b1b] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" data-path="shopping-cart" href="#">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute -top-2 -right-2.5 h-4 min-w-[16px] px-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-[10px] flex items-center justify-center font-bold">3</span>
+</div>
+<span class="hidden sm:inline font-currency-price text-currency-price text-on-surface">Rp 185.000</span>
+</a>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[1.5px_1.5px_0px_#1c1b1b]">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN WRAPPER -->
+<main class="w-full pt-28 pb-16 bg-[#FCF9F8] flex-1">
+<!-- STEPPER SECTION (Matches SCREEN_41 logic, with Step 3 Active) -->
+<section class="w-full bg-surface-container-low/70 border-b border-outline-variant/30 py-6 px-margin md:px-margin-tablet lg:px-margin-desktop mb-8">
+<div class="max-w-2xl mx-auto relative">
+<div class="absolute left-8 right-8 top-1/2 -translate-y-1/2 h-1 bg-surface-variant z-0 rounded-full">
+<div class="h-full bg-primary rounded-full transition-all duration-300 w-full"></div>
+</div>
+<div class="relative z-10 flex items-center justify-between">
+<!-- Step 1: Keranjang (Completed) -->
+<div class="flex flex-col items-center gap-1.5 bg-surface-container-low px-2 rounded-full">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-lg text-label-lg shadow-sm border border-primary/20">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">1. Keranjang</span>
+</div>
+<!-- Step 2: Pengiriman & Bayar (Completed) -->
+<div class="flex flex-col items-center gap-1.5 bg-surface-container-low px-2 rounded-full">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-lg text-label-lg shadow-sm border border-primary/20">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">2. Pengiriman &amp; Bayar</span>
+</div>
+<!-- Step 3: Selesai (Active Highlight) -->
+<div class="flex flex-col items-center gap-1.5 bg-surface-container-low px-2 rounded-full">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-lg text-label-lg shadow-md ring-4 ring-secondary/20 border border-secondary transition-all">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<span class="font-fredoka text-[14px] text-secondary font-bold tracking-wide">3. Selesai ✨</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTENT CONTAINER (Clean, Neobrutalist tokens max-w-6xl) -->
+<div class="max-w-6xl mx-auto px-4 flex flex-col gap-8">
+<!-- HERO CELEBRATION CARD (Playful Lavender Gradient with Neobrutalism touches) -->
+<section class="relative overflow-hidden w-full rounded-2xl bg-gradient-to-r from-[#F5EEFF] via-[#FAF5FF] to-[#FFF0F5] border border-primary/20 shadow-[4px_4px_0px_#1c1b1b] p-6 md:p-8">
+<!-- Soft decorative glow shapes -->
+<div class="absolute -right-6 -bottom-6 w-48 h-48 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-6 -top-6 w-40 h-40 rounded-full bg-primary-fixed/40 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6">
+<div class="flex flex-col items-start gap-3 max-w-2xl">
+<!-- Badge -->
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-fredoka text-[13px] font-bold border border-on-surface shadow-[1.5px_1.5px_0px_#1c1b1b]">
+<span>POP! 🎉</span>
+<span>Little Things, Big Happiness!</span>
+</div>
+<!-- Title -->
+<h1 class="font-fredoka text-[28px] sm:text-[34px] font-bold text-on-surface tracking-tight leading-tight">
+              Hore! Pesanan Berhasil Dibuat! 🎉✨
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Terima kasih, <strong class="text-on-surface font-bold">Nadia Putri</strong>! Pernak-pernik gemas pesananmu segera disiapkan dan dikemas Min-Mayu dengan penuh cinta dan bubble wrap tebal berlapis. 🎀
+            </p>
+<!-- Order ID pill & timestamp -->
+<div class="flex flex-wrap items-center gap-3 pt-1">
+<div class="flex items-center bg-surface-container-lowest border border-on-surface px-3.5 py-1.5 rounded-xl shadow-[2px_2px_0px_#1c1b1b]">
+<span class="font-body-sm text-body-sm text-on-surface-variant mr-2">No. Pesanan:</span>
+<span class="font-fredoka text-[15px] text-primary font-bold tracking-wider" id="orderIdText">#MS-20261108-0001</span>
+<button class="ml-2.5 px-2 py-0.5 rounded-lg bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface flex items-center gap-1 text-[12px] font-fredoka font-semibold transition-colors" onclick="copyOrderId()">
+<span class="material-symbols-outlined text-[15px] text-primary">content_copy</span>
+<span id="copyLabel">Salin</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-low border border-outline-variant/60 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span>8 November 2026, 14:28 WIB</span>
+</div>
+</div>
+</div>
+<!-- Hero Action CTAs -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
+<a class="h-12 px-6 rounded-xl bg-primary text-on-primary font-fredoka text-[15px] font-bold border border-on-surface shadow-[3px_3px_0px_#1c1b1b] hover:bg-primary-container active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2" href="#trackingSection">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span>Lacak Pesanan 📦</span>
+</a>
+<button class="h-11 px-5 rounded-xl bg-surface-container-lowest text-on-surface font-fredoka text-[14px] font-bold border border-on-surface shadow-[2px_2px_0px_#1c1b1b] hover:bg-surface-container-low active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2" onclick="triggerInvoiceDownload()">
+<span class="material-symbols-outlined text-[18px] text-secondary">download</span>
+<span>Unduh Invoice PDF 📄</span>
+</button>
+</div>
+</div>
+</section>
+<!-- TWO-COLUMN LAYOUT -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: Main Information Details (7 of 12 columns) -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- CARD 1: Status Pembayaran -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 md:p-7 border border-on-surface/10 shadow-[2px_2px_0px_#1c1b1b] flex flex-col gap-5">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center border border-on-surface shadow-[1.5px_1.5px_0px_#1c1b1b]">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+<div>
+<h2 class="font-fredoka text-[18px] font-bold text-on-surface">Status Pembayaran</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Metode QRIS Otomatis Terverifikasi</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-fredoka text-[12px] font-bold border border-on-surface shadow-[1px_1px_0px_#1c1b1b]">
+                QRIS Terverifikasi • Lunas Otomatis
+              </span>
+</div>
+<!-- Payment Highlight Box -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest border border-on-surface/20 flex items-center justify-center shadow-sm text-primary">
+<span class="material-symbols-outlined text-[28px]">qr_code_2</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Total Pembayaran</span>
+<span class="font-fredoka text-[24px] font-bold text-primary">Rp 195.000</span>
+</div>
+</div>
+<div class="flex flex-col sm:items-end">
+<span class="px-2.5 py-1 rounded-md bg-tertiary-container text-on-tertiary-container font-fredoka text-[12px] font-bold border border-on-surface/30 shadow-[1px_1px_0px_#1c1b1b]">
+                  Lunas Otomatis
+                </span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">Ref: QRS-889104-MYRN</span>
+</div>
+</div>
+<!-- Features Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-on-surface-variant">
+<div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span class="font-body-sm text-body-sm font-semibold">Bebas Biaya Admin</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[18px] text-primary">receipt_long</span>
+<span class="font-body-sm text-body-sm font-semibold">PPN 11% Tercakup</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[18px] text-secondary">inventory_2</span>
+<span class="font-body-sm text-body-sm font-semibold">Free Eco-Bubblewrap</span>
+</div>
+</div>
+<!-- Email confirmation notice -->
+<div class="p-3.5 rounded-xl bg-primary-fixed/30 border border-primary/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">mail</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Salinan bukti pembayaran digital dan e-receipt lengkap telah dikirim ke <strong class="underline font-semibold text-primary">nadiaputri@gmail.com</strong>.
+              </p>
+</div>
+</div>
+<!-- CARD 2: Informasi Pengiriman -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 md:p-7 border border-on-surface/10 shadow-[2px_2px_0px_#1c1b1b] flex flex-col gap-5" id="trackingSection">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center border border-on-surface shadow-[1.5px_1.5px_0px_#1c1b1b]">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+<div>
+<h2 class="font-fredoka text-[18px] font-bold text-on-surface">Informasi Pengiriman</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Diproses dari Gudang Mayurien Jakarta Pusat</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-fredoka text-[12px] font-bold border border-on-surface shadow-[1px_1px_0px_#1c1b1b]">
+                Siap Dikemas 📦
+              </span>
+</div>
+<!-- Ekspedisi & Tracking Bar -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-fredoka text-[15px] font-bold text-on-surface">J&amp;T Express Regular</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest border border-on-surface/30 font-fredoka text-[11px] font-bold text-secondary">Termurah</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nomor Resi:</span>
+<span class="font-fredoka text-[15px] font-bold text-primary tracking-wider" id="resiNumber">JP9823102448</span>
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" onclick="copyResi()" title="Salin Resi">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-fredoka text-[13px] font-bold border border-on-surface shadow-[1.5px_1.5px_0px_#1c1b1b] hover:bg-surface-container transition-all self-start sm:self-auto" href="#" onclick="alert('Membuka pelacakan resmi J&amp;T Express untuk resi JP9823102448'); return false;">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Lacak di J&amp;T Web</span>
+</a>
+</div>
+<!-- Estimasi & Alamat Penerima -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Estimasi -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 border border-outline-variant/40 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+<span class="font-fredoka text-[14px] font-bold">Estimasi Tiba</span>
+</div>
+<p class="font-fredoka text-[16px] font-bold text-on-surface">Besok Sore (1x24 Jam)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Senin, 9 November 2026</p>
+</div>
+<!-- Alamat -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 border border-outline-variant/40 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-fredoka text-[14px] font-bold">Alamat Pengiriman</span>
+</div>
+<p class="font-fredoka text-[14px] font-bold text-on-surface">Nadia Putri (0812-3456-7890)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Jl. Melati No. 18, RT 04 / RW 02, Kebon Jeruk, Jakarta Barat, 11530.
+                </p>
+<p class="font-body-sm text-[12px] text-tertiary italic mt-0.5">Catatan: Pagar hitam samping pos satpam.</p>
+</div>
+</div>
+</div>
+<!-- CARD 3: Rincian Produk Dipesan -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 md:p-7 border border-on-surface/10 shadow-[2px_2px_0px_#1c1b1b] flex flex-col gap-4">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed-dim text-on-tertiary-fixed flex items-center justify-center border border-on-surface shadow-[1.5px_1.5px_0px_#1c1b1b]">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+</div>
+<div>
+<h2 class="font-fredoka text-[18px] font-bold text-on-surface">Rincian Produk Dipesan</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 Item Utama + 1 Hadiah Spesial Unboxing</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high font-fredoka text-[12px] text-on-surface-variant font-bold">
+                Total: 4 Barang
+              </span>
+</div>
+<!-- Product Items List -->
+<div class="flex flex-col gap-3">
+<!-- Item 1 -->
+<div class="flex items-center justify-between gap-4 p-3 rounded-xl bg-surface-container-low border border-outline-variant/40 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest overflow-hidden flex-shrink-0 border border-on-surface/10">
+<img alt="Pastel Dream Journal 2025" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgVttFZvF3XJyRa3gkDE37HlAcgI5Li6i1yUc-yY7Vg2SmxornMOZMSFkrTGEGqZMkSoVwVP7FBL0yO-Du39Wo7wq-jDcUed75iVh9lJMAgiifbK36xVT2w4bfCnhzwZfMzMb-e1Rlr8uOuI1YjFH4VC1Df-LdQR2BCdOWzwnX6_qYa-d0HaF6Il_W6rkJRDRGfenY1Xzui4_TO5pi0MZmpKeuJ1atvqpjVvs73A"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-fredoka text-[15px] font-bold text-on-surface truncate">Pastel Dream Journal 2025</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Variasi: Lavender Lilac (A5 Hardcover)</p>
+<span class="font-body-sm text-[12px] text-on-surface-variant">1x @ Rp 89.000</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-fredoka text-[16px] font-bold text-primary">Rp 89.000</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between gap-4 p-3 rounded-xl bg-surface-container-low border border-outline-variant/40 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest overflow-hidden flex-shrink-0 border border-on-surface/10">
+<img alt="Sakura Washi Tape Set" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwREVtv-ym16zV52c8b9r-kIkWb7NRZX3m_6ZWC40Lue4qDQunUnQUh305WJ_E8zkgpYJQNr3x73uDG_Mb5M4QRTr-WCyQoli8APVHvtRfJtPcM3AbMDeyJZKA-sBtcP2a4d_jLV-vPep6Y6zDjnrfujaT_P6XGCHxGrY8t2ZAyxgU0P_-5ptIBcPplHEiIhkCfZZKC8Pe1zO1jb3fT5HX32uXmLVxgrSJrWL88g"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-fredoka text-[15px] font-bold text-on-surface truncate">Sakura Washi Tape Set (5 Rolls)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Variasi: Spring Blossom (Foil Edition)</p>
+<span class="font-body-sm text-[12px] text-on-surface-variant">1x @ Rp 48.000</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-fredoka text-[16px] font-bold text-primary">Rp 48.000</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between gap-4 p-3 rounded-xl bg-surface-container-low border border-outline-variant/40 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest overflow-hidden flex-shrink-0 border border-on-surface/10">
+<img alt="Ceramic Bear Desk Organizer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiVF9MKEywu7cO-t-kk1pt2ClF8dHpQzXB3eO5Vi4_6SWTe9xdD4XC4B7dom-GOsqY23Iny3hJCOqXhuSDgTb0H7IkdnprrflmKakwwUNe1uE5qgypX8QHVSpfnPpzNcvxYme4-K7Q1plIamMCp7uz-78Xsa5Q6UmesMxLjhoir4-Ltn3cuHg22UB-dLJOYUjBYCY_qKRGUnoPdSJT2Q3T9nA8k6udm5ivglBKPQ"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-fredoka text-[15px] font-bold text-on-surface truncate">Ceramic Bear Desk Organizer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Variasi: Butter Yellow</p>
+<span class="font-body-sm text-[12px] text-on-surface-variant">1x @ Rp 60.000</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-fredoka text-[16px] font-bold text-primary">Rp 60.000</span>
+</div>
+</div>
+<!-- Item 4 (FREE GIFT) -->
+<div class="flex items-center justify-between gap-4 p-3.5 rounded-xl bg-tertiary-fixed/30 border border-tertiary/30 border-dashed">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-16 h-16 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed flex-shrink-0 border border-on-surface shadow-[1px_1px_0px_#1c1b1b]">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">redeem</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2 mb-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-fredoka text-[10px] font-bold uppercase">Hadiah Spesial</span>
+<h3 class="font-fredoka text-[14px] font-bold text-on-surface truncate">Sticker Pack Hologram Min-Mayu</h3>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Edisi Kolektor Komunitas Jurnal Mayurien</p>
+<span class="font-fredoka text-[12px] text-secondary font-bold">1x GRATIS (Free Gift)</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-fredoka text-[16px] font-bold text-secondary">FREE</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant line-through">Rp 25.000</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Summary, WhatsApp Support, & CTA (5 of 12 columns) -->
+<div class="lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28">
+<!-- CARD: Ringkasan Biaya (Identical styling with SCREEN_41) -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 md:p-7 border border-on-surface/10 shadow-[3px_3px_0px_#1c1b1b] flex flex-col gap-5">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
+<h3 class="font-fredoka text-[18px] font-bold text-on-surface">Ringkasan Biaya</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-fredoka text-[11px] font-bold">
+                Lunas
+              </span>
+</div>
+<!-- Cost Rows -->
+<div class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Subtotal Produk (3 item)</span>
+<span class="font-currency-price text-on-surface font-semibold">Rp 197.000</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1.5">
+<span>Potongan Voucher</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-fredoka text-[10px] font-bold">GEMAS15</span>
+</div>
+<span class="font-currency-price font-bold">-Rp 15.000</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Ongkos Kirim (J&amp;T Regular)</span>
+<span class="font-currency-price text-on-surface font-semibold">Rp 12.000</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span>Biaya Layanan &amp; Asuransi</span>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-help" title="Perlindungan paket anti penyok">info</span>
+</div>
+<span class="font-currency-price text-on-surface font-semibold">Rp 1.000</span>
+</div>
+<div class="h-px bg-outline-variant/40 my-3"></div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<span class="font-fredoka text-[16px] font-bold text-on-surface block">Total Tagihan Dibayar</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Sudah termasuk PPN 11%</span>
+</div>
+<span class="font-fredoka text-[26px] font-bold text-primary">Rp 195.000</span>
+</div>
+</div>
+<!-- Security & Packing micro badges -->
+<div class="flex items-center justify-center gap-3 pt-2 text-on-surface-variant font-body-sm text-[12px] border-t border-outline-variant/30">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-tertiary">verified_user</span> Transaksi Terlindungi</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-primary">inventory_2</span> Bubble Wrap Tebal</span>
+</div>
+</div>
+<!-- CARD: Butuh Bantuan Pesanan? (WhatsApp CS Box) -->
+<div class="w-full bg-[#EBF8F2] border border-[#25D366]/30 rounded-2xl p-5 shadow-[2px_2px_0px_#1c1b1b] flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-[#25D366] text-white flex items-center justify-center border border-on-surface shadow-[1.5px_1.5px_0px_#1c1b1b]">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+</div>
+<div>
+<h4 class="font-fredoka text-[16px] font-bold text-on-surface">Butuh Bantuan Pesanan?</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Min-Mayu aktif jam 08:00 - 22:00 WIB</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Ingin tambah request kartu ucapan ulang tahun atau revisi catatan kurir? Min-Mayu siap bantu!
+            </p>
+<a class="h-11 rounded-xl bg-surface-container-lowest text-on-surface font-fredoka text-[14px] font-bold border border-on-surface shadow-[2px_2px_0px_#1c1b1b] hover:bg-[#dcfce7] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2" href="https://wa.me/6281234567890?text=Halo%20Min-Mayu!%20Saya%20mau%20tanya%20pesanan%20MS-20261108-0001" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-[#25D366]">support_agent</span>
+<span>Chat Min-Mayu di CS WhatsApp</span>
+</a>
+</div>
+<!-- PRIMARY ACTION: Lanjut Belanja di MayurienShop -->
+<a class="h-13 py-3.5 px-6 rounded-xl bg-primary text-on-primary font-fredoka text-[16px] font-bold border border-on-surface shadow-[3px_3px_0px_#1c1b1b] hover:bg-primary-container active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2.5 text-center" data-path="product-catalog" href="#">
+<span class="material-symbols-outlined text-[22px]">storefront</span>
+<span>Lanjut Belanja di MayurienShop 🛍️</span>
+</a>
+<!-- RECOMMENDATION TEASER -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 border border-on-surface/10 shadow-[2px_2px_0px_#1c1b1b] flex flex-col gap-2.5">
+<span class="font-fredoka text-[13px] font-bold text-primary uppercase tracking-wider">Mungkin Kamu Suka</span>
+<div class="flex items-center gap-3 p-2 rounded-xl bg-surface-container-low border border-outline-variant/30">
+<img alt="Retro TV Sticky Dispenser" class="w-14 h-14 rounded-lg object-cover bg-surface-container-highest flex-shrink-0 border border-on-surface/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi3TuYfKp0F96qGM310kShnhSahKQfn7bAJ2IlfsI76CdXop8ycLIv00rX_bDoUSgoEYw9dmPnLsaTYhWPxuQtS-DkjXbl9UiMbs0evba32IwaqvLBxYq5G69ac1G2k2Z2Hh_cWDAF_mALcmLlVovKTPCcTM6DPekCfs8s734sJnEAC2wfEPaBCV_eZy0TvdG2j3uX9rEoUFx5pWJL9An9lSsjQEFN9vymYy1F0Q"/>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-fredoka text-[14px] font-bold text-on-surface truncate">Retro TV Sticky Note Dispenser</span>
+<span class="font-currency-price text-body-sm text-primary font-bold">Rp 32.000</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary border border-on-surface shadow-[1px_1px_0px_#1c1b1b] flex items-center justify-center hover:bg-primary-container transition-all" onclick="showToast('Retro TV Sticky Note ditambahkan ke wishlist!')" title="Tambah ke keranjang">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-[3px_3px_0px_#1c1b1b] border border-on-surface" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">check_circle</span>
+<span class="font-fredoka text-[14px]" id="toastMessage">Teks berhasil disalin!</span>
+</div>
+</main>
+<!-- FOOTER (Identical to SCREEN_41) -->
+<footer class="w-full bg-surface-container-low text-on-surface border-t border-outline-variant/30 mt-auto">
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-xl">
+<!-- Col 1: Brand & Tagline -->
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<img alt="MayurienShop Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBhE-TB90t7loSGvOLIcp0MpPoUvFM18g6FNDe8swQUBJYpc7AvcuGLECJcSf_K5lULReyFwItV7PhpYvolSGi-jQ05p8EB11Ao0YntVhUWgNMlJreJ1qyiVwvL5xNYrQfbvkkcnj9yyDEMyx5-NO93fWdWTq3HArJgeXn95HHN9NlPHfsNB02xOX8LIe-9FD_VNoBfNyc7JxZHZBJLXnRdhsrl8Q6vnETFkK5VLw"/>
+<span class="font-fredoka text-[20px] font-bold text-primary">MayurienShop</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Little Things, Big Happiness! Temukan ragam perlengkapan journal, alat tulis aesthetic, dan pernak-pernik lucu untuk harimu.
+          </p>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center px-space-sm py-space-xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-fredoka text-[12px] font-bold border border-on-surface shadow-[1.5px_1.5px_0px_#1c1b1b]">✨ 100% Original</span>
+<span class="inline-flex items-center px-space-sm py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-fredoka text-[12px] font-bold border border-on-surface shadow-[1.5px_1.5px_0px_#1c1b1b]">💖 Kawaii Quality</span>
+</div>
+</div>
+<!-- Col 2: Koleksi Belanja -->
+<div>
+<h3 class="font-fredoka text-[16px] font-bold text-on-surface mb-space-md">Koleksi Belanja</h3>
+<ul class="space-y-space-sm font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" data-path="product-catalog" href="#">Stationery &amp; Pens</a></li>
+<li><a class="hover:text-primary transition-colors" data-path="product-catalog" href="#">Desk Decor &amp; Organizers</a></li>
+<li><a class="hover:text-primary transition-colors" data-path="product-catalog" href="#">Cute Accessories &amp; Pins</a></li>
+<li><a class="hover:text-primary transition-colors" data-path="product-catalog" href="#">Gift Sets &amp; Hampers</a></li>
+</ul>
+</div>
+<!-- Col 3: Bantuan & Layanan -->
+<div>
+<h3 class="font-fredoka text-[16px] font-bold text-on-surface mb-space-md">Bantuan &amp; Layanan</h3>
+<ul class="space-y-space-sm font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" data-path="checkout" href="#">Konfirmasi Pembayaran</a></li>
+<li><a class="hover:text-primary transition-colors" data-path="order-confirmation" href="#">Cek Status Resi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ &amp; Panduan Belanja</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Kebijakan Pengembalian</a></li>
+</ul>
+</div>
+<!-- Col 4: Pembayaran & Kurir -->
+<div>
+<h3 class="font-fredoka text-[16px] font-bold text-on-surface mb-space-md">Pembayaran &amp; Kurir</h3>
+<div class="space-y-space-md">
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-2 py-1 bg-surface-container-lowest border border-on-surface rounded font-label-md text-label-md shadow-[1px_1px_0px_#1c1b1b]">BCA</span>
+<span class="px-2 py-1 bg-surface-container-lowest border border-on-surface rounded font-label-md text-label-md shadow-[1px_1px_0px_#1c1b1b]">Mandiri</span>
+<span class="px-2 py-1 bg-surface-container-lowest border border-on-surface rounded font-label-md text-label-md shadow-[1px_1px_0px_#1c1b1b]">QRIS</span>
+<span class="px-2 py-1 bg-surface-container-lowest border border-on-surface rounded font-label-md text-label-md shadow-[1px_1px_0px_#1c1b1b]">GoPay</span>
+</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-2 py-1 bg-surface-container-lowest border border-on-surface rounded font-label-md text-label-md shadow-[1px_1px_0px_#1c1b1b]">JNE</span>
+<span class="px-2 py-1 bg-surface-container-lowest border border-on-surface rounded font-label-md text-label-md shadow-[1px_1px_0px_#1c1b1b]">SiCepat</span>
+<span class="px-2 py-1 bg-surface-container-lowest border border-on-surface rounded font-label-md text-label-md shadow-[1px_1px_0px_#1c1b1b]">J&amp;T Express</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Copyright Bar -->
+<div class="border-t border-outline-variant/30 pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center sm:text-left">
+          © 2025 MayurienShop. All rights reserved. Crafted with joy for stationery lovers.
+        </p>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="hover:text-on-surface transition-colors" href="#">Kebijakan Privasi</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- JAVASCRIPT MICRO-INTERACTIONS -->
+<script>
+    function copyOrderId() {
+      const orderId = '#MS-20261108-0001';
+      const label = document.getElementById('copyLabel');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(orderId).then(() => {
+          if (label) label.textContent = 'Tersalin!';
+          showToast('Nomor pesanan #MS-20261108-0001 berhasil disalin!');
+          setTimeout(() => { if (label) label.textContent = 'Salin'; }, 2000);
+        });
+      } else {
+        showToast('Nomor pesanan #MS-20261108-0001 berhasil disalin!');
+      }
+    }
+
+    function copyResi() {
+      const resi = 'JP9823102448';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(resi).then(() => {
+          showToast('Nomor Resi J&T ' + resi + ' berhasil disalin!');
+        });
+      } else {
+        showToast('Nomor Resi J&T ' + resi + ' berhasil disalin!');
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toastNotification');
+      const msgElem = document.getElementById('toastMessage');
+      if (toast && msgElem) {
+        msgElem.textContent = message;
+        toast.classList.remove('opacity-0', 'translate-y-24');
+        toast.classList.add('opacity-100', 'translate-y-0');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-24');
+        }, 2800);
+      }
+    }
+
+    function triggerInvoiceDownload() {
+      showToast('Menyiapkan e-Invoice #MS-20261108-0001 PDF...');
+      setTimeout(() => {
+        showToast('Invoice PDF terunduh otomatis!');
+      }, 1000);
+    }
+  </script>
+</body></html>

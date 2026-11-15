@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MayurienShop</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&family=Fredoka:wght@600;700&family=Nunito+Sans:wght@400;500;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&family=Nunito+Sans:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#d0bcff", "on-background": "#e4e1eb", "on-surface-variant": "#cbc4d2", "on-tertiary-fixed-variant": "#104688", "primary-container": "#b39af0", "on-tertiary-fixed": "#001b3e", "primary": "#d0bcff", "on-secondary-container": "#f799bd", "inverse-surface": "#e4e1eb", "tertiary": "#aac7ff", "on-primary": "#381f6e", "secondary-fixed-dim": "#ffb0cd", "primary-fixed-dim": "#d0bcff", "on-error-container": "#ffdad6", "surface-bright": "#393840", "on-secondary-fixed": "#3e0021", "surface-dim": "#131319", "on-primary-container": "#452e7c", "tertiary-fixed-dim": "#aac7ff", "on-surface": "#e4e1eb", "on-primary-fixed": "#230259", "surface": "#131319", "outline": "#948e9b", "surface-container-highest": "#34343b", "error": "#ffb4ab", "inverse-on-surface": "#303037", "inverse-primary": "#6850a0", "on-tertiary-container": "#003b7c", "surface-container": "#1f1f26", "outline-variant": "#494550", "on-error": "#690005", "on-tertiary": "#002f65", "error-container": "#93000a", "on-primary-fixed-variant": "#4f3886", "surface-container-lowest": "#0d0e14", "secondary-container": "#762d4e", "tertiary-container": "#7fa8f1", "primary-fixed": "#e9ddff", "background": "#131319", "surface-container-low": "#1b1b22", "tertiary-fixed": "#d7e3ff", "on-secondary-fixed-variant": "#762d4e", "on-secondary": "#591637", "secondary-fixed": "#ffd9e4", "surface-container-high": "#292931", "surface-variant": "#34343b", "secondary": "#ffb0cd" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "margin-desktop": "2.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "body-md": ["Nunito Sans"], "display-lg-mobile": ["Epilogue"], "display-lg": ["Epilogue"], "headline-md": ["Epilogue"], "body-lg": ["Nunito Sans"], "headline-lg-mobile": ["Epilogue"], "label-lg": ["Nunito Sans"], "headline-lg": ["Epilogue"], "headline-sm": ["Epilogue"], "body-sm": ["Nunito Sans"], "label-md": ["Nunito Sans"], "numeric-price": ["Nunito Sans"], "brand": ["Fredoka", "sans-serif"] }, fontSize: { "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }], "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }], "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "500" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "700" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "700" }], "numeric-price": ["18px", { lineHeight: "24px", fontWeight: "800" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#131319;color:#e4e1eb;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-low/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-brand text-[21px] font-bold tracking-tight text-primary leading-none">Mayurien<span class="text-secondary">Shop</span></span><span class="material-symbols-outlined text-secondary text-[18px] animate-pulse">auto_awesome</span></div><div class="flex items-center gap-1 mt-0.5"><span class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-1.5 py-0.5 rounded-full uppercase leading-none text-[9px]">Alat Tulis Imut</span></div></div></div><div class="flex items-center gap-1"><button aria-label="Pencarian" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Mode Gelap Aktif" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><a aria-label="Keranjang belanja" class="relative w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" data-path="keranjang" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 bg-secondary text-on-secondary font-label-md text-[10px] leading-tight flex items-center justify-center rounded-full">3</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter pb-8 gap-space-lg">
+<!-- Top Promo Banner Pill -->
+<div class="w-full mt-2">
+<div class="flex items-center justify-between gap-space-xs bg-surface-container-high px-3 py-2 rounded-full shadow-[3px_3px_0_#121216] cursor-pointer hover:bg-surface-bright transition-all" onclick="navigator.clipboard?.writeText('GEMAS'); showToast('Kode GEMAS berhasil disalin! ✨');">
+<div class="flex items-center gap-2 min-w-0">
+<span class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">local_shipping</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">
+          Gratis Ongkir se-Indonesia min. <strong class="text-secondary font-bold">Rp 150rb</strong>
+</p>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded-full flex-shrink-0">
+<span class="font-label-md text-[11px] text-primary tracking-wider uppercase font-bold">GEMAS</span>
+<span class="material-symbols-outlined text-[13px] text-primary">content_copy</span>
+</div>
+</div>
+</div>
+<!-- Hero Section Mobile (Neobrutalist Card) -->
+<section class="relative w-full rounded-[16px] bg-surface-container-high p-4 shadow-[3px_3px_0_#121216] overflow-hidden flex flex-col gap-4">
+<!-- Ambient subtle glow -->
+<div class="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-8 -left-8 w-36 h-36 rounded-full bg-secondary/15 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-2">
+<div class="inline-flex items-center gap-1.5 self-start bg-secondary-container px-2.5 py-1 rounded-full text-on-secondary-container shadow-[2px_2px_0_#121216]">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+<span class="font-label-md text-[11px] font-bold uppercase tracking-wider">Koleksi Spesial Musim Ini</span>
+</div>
+<h1 class="font-brand text-[28px] leading-[34px] font-bold text-on-surface tracking-tight mt-1">
+        Make Every Little Thing <span class="text-primary underline decoration-secondary decoration-wavy decoration-2">More Fun!</span> ✨
+      </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Temukan stationery estetik, journal supplies, dan desk accessories gemas buat upgrade semangat belajarmu.
+      </p>
+</div>
+<!-- Hero Image Showcase -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-[2px_2px_0_#121216] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Aesthetic Korean pastel stationery set arranged neatly on a dark wooden desk with soft warm lamp lighting, open bullet journal with cute stickers, pastel lavender gel pens, floral washi tapes, cozy study aesthetic, high detailed photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnmOwO9R9naH3NjiLDcoBDvSp0wPkAXw6RLWgth4KndIaC9uR2-HbkN-5fcu6vZQ76H9JxYjAs-7Vbnm6j_KN-_luFx9sfsFn-3oe22oRl3zIhKolqAn4iCS66rAkPzl51wicN-FOzgv_KISflRxbBRQ2YdWeWdyTANgIu1mnmGu-6nNXKv-27tkFmJR8ZotsiA4rkaPaZ08PKxBoonHJcqI1oxe2DcA0aMa_lhg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<!-- Best Seller Tag -->
+<div class="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-lg shadow-[2px_2px_0_#121216]">
+<span class="material-symbols-outlined text-[14px] text-secondary">local_fire_department</span>
+<span class="font-label-md text-label-md text-on-surface">Best Seller! <span class="text-secondary font-bold">Diskon 15%</span></span>
+</div>
+<!-- Live stock badge -->
+<div class="absolute top-2.5 right-2.5 bg-primary px-2 py-0.5 rounded-full text-on-primary font-label-md text-[10px] font-bold tracking-wide shadow-[2px_2px_0_#121216] flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+        Ready Stock
+      </div>
+</div>
+<!-- CTA Action Group -->
+<div class="relative z-10 flex items-center gap-2.5 pt-1">
+<a class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-[3px_3px_0_#121216] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all" data-path="katalog-produk" href="#">
+<span class="font-bold">Explore Collection</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="flex items-center justify-center gap-1.5 py-3 px-3.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg shadow-[3px_3px_0_#121216] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none hover:bg-surface-bright transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">trending_up</span>
+<span class="font-bold">Trending</span>
+</button>
+</div>
+</section>
+<!-- Kategori Pilihan (2x2 Grid) -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-secondary">category</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Kategori Pilihan</h2>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-0.5" data-path="katalog-produk" href="#">
+        Lihat Semua <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Category 1 -->
+<a class="relative group p-3 rounded-xl bg-surface-container flex flex-col justify-between h-28 shadow-[3px_3px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all overflow-hidden" data-path="katalog-produk" href="#">
+<div class="absolute -right-3 -bottom-3 w-16 h-16 rounded-full overflow-hidden opacity-80 group-hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Cute pastel hardcover bullet journal and notebook stack with ribbon bookmarks on clean dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0dlqS6mphnGwtRaCIkSO0MMuVDkfvqOYVL-V__9hz3KCjHCKza-x-hKZvX1yeTRGFhlK8BhpEAhwt_iuxB8u98l2hUQ6EiXAf4fDPbvnMqlmQOotyX9AzT_lx9H3_-NIYA8q5imBoq69xxWNmEK6h9tmfmNL-gltOud3Hd2DkoP7oSRqbGIRgce11eQwCIhwt2KCt6XVp7m4aPUeXrI3FZV-m122mreY4uXmS6g"/>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-[2px_2px_0_#121216]">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded text-[10px] font-label-md text-on-surface-variant">42+ Item</span>
+</div>
+<div class="z-10 mt-auto">
+<p class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Notebooks & Journal</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Grid & Dotted</span>
+</div>
+</a>
+<!-- Category 2 -->
+<a class="relative group p-3 rounded-xl bg-surface-container flex flex-col justify-between h-28 shadow-[3px_3px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all overflow-hidden" data-path="katalog-produk" href="#">
+<div class="absolute -right-3 -bottom-3 w-16 h-16 rounded-full overflow-hidden opacity-80 group-hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Colorful pastel dual tip aesthetic highlighters and retro click gel pen collection in soft lilac and mint colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXr4HEUssgoahgd80HJdg63kIpmEe-dLAtXstFf3KP0IPuOiePH6xsoQkx14ixWJ8XxNM9SXY-dxEiT0Vb8YbbiAWVtkjqOng6vkWuvWx6OmSCDkFBr0QR3Cikrz_wO2isBuKR8MBk2t2hRRz0CeUKB8T7j7GE33_GCpvd3bmD1JANQuPHLWYHTMsLFGj4lc5Bfh52N2H0iVktZiZQ-YwZMumobSbOrSEBoAxoKQ"/>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shadow-[2px_2px_0_#121216]">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded text-[10px] font-label-md text-on-surface-variant">28+ Item</span>
+</div>
+<div class="z-10 mt-auto">
+<p class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Pens & Highlighters</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Smooth 0.5mm</span>
+</div>
+</a>
+<!-- Category 3 -->
+<a class="relative group p-3 rounded-xl bg-surface-container flex flex-col justify-between h-28 shadow-[3px_3px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all overflow-hidden" data-path="katalog-produk" href="#">
+<div class="absolute -right-3 -bottom-3 w-16 h-16 rounded-full overflow-hidden opacity-80 group-hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Mini ceramic tulip pen holder, pastel mini trash can desk organizer, and cute pastel acrylic desk clock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1i9WnnU-5w33YJM49yCb9hsIxGDWai2fTWjlomiQCrRt8NP1G7elL7I6DP3Ecojq_gGAUvJwG-WrSkKJqOHNTSs4obO0t39UhszgrNdHSBsSz75o5IH11shtRPWJ-qDS5hZ8TXPJU2fP9I6HY_rj-aCS7mIYy2PI5-KbIxTs3o_FNBVGdx5KU08SFdKhPI_dGQwP84J7cX8m5CDnmFQgyPXuSH6O3tqPQXsxhHg"/>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shadow-[2px_2px_0_#121216]">
+<span class="material-symbols-outlined text-[18px]">potted_plant</span>
+</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded text-[10px] font-label-md text-on-surface-variant">35+ Item</span>
+</div>
+<div class="z-10 mt-auto">
+<p class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Desk Decor</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Meja Gemas</span>
+</div>
+</a>
+<!-- Category 4 -->
+<a class="relative group p-3 rounded-xl bg-surface-container flex flex-col justify-between h-28 shadow-[3px_3px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all overflow-hidden" data-path="katalog-produk" href="#">
+<div class="absolute -right-3 -bottom-3 w-16 h-16 rounded-full overflow-hidden opacity-80 group-hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Soft corduroy pouch in matcha green and gift box bundled with satin ribbon and pastel stationery surprise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4edgWGPIS_iXk-H3EaGW0_bXaRE2hCfdGn8jriO92fTtIMR0pGXM4lmzxcQVfCAz4tEjyhUejBksUF5bNk3ty9x6s6xuBo2nmbkjbP3UuPvP-PPfg0fBeOEa-TqdIZZY2nEzWfn3oOR9IGKzD8EkS8InqBlCgBkN3zDWzLhq52wzkrVLMkyel29iaYZC1t4ke1CMIp_-UzreKWu2NHuCfNvXSKvYV14IANvezNg"/>
+</div>
+<div class="flex items-center justify-between z-10">
+<span class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-[2px_2px_0_#121216]">
+<span class="material-symbols-outlined text-[18px]">redeem</span>
+</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded text-[10px] font-label-md text-on-surface-variant">19+ Item</span>
+</div>
+<div class="z-10 mt-auto">
+<p class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Gift Sets & Pouches</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Siap Bungkus</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Section "Lagi Hype Banget!" -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-secondary animate-bounce">whatshot</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Lagi Hype Banget!</h2>
+</div>
+<span class="bg-secondary/15 text-secondary px-2 py-0.5 rounded-full font-label-md text-[11px] font-bold">Terlaris</span>
+</div>
+<!-- 2-Column Responsive Product Grid -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Product Card 1 -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-[3px_3px_0_#121216] overflow-hidden group">
+<div class="relative w-full h-36 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Pastel cloud daily planner 2025 with soft gradient purple blue skies cover, ribbon bookmark, lay flat binding on neat desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzYkNjOPbflzFHqeM0uZQ_c9VH12vGf9GIm5YqwiDSzongsrxZAgl6CBk0-6DvmDu6ZO7IRTt5ccrp6XQUGInPYXHq20GH7JQB_0Xryrsd47bobyzrTY0hrTQ3WwOWRarqlFvRaZsiT5dlZZQ1d0U24lzUzuvgj9xtEj_vrL3w9oBTH4gIrqdhPaVPOpjFkrlFZMfe3Xj-QB5go6zKB19lHAVtJS1ZKPJthJ-h4g"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-md text-[10px] font-bold px-1.5 py-0.5 rounded shadow-[1.5px_1.5px_0_#121216]">
+            -20%
+          </span>
+<button aria-label="Tambah favorit" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-[#f6d56a]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-[11px] text-on-surface font-bold">4.9</span>
+<span class="text-on-surface-variant text-[10px]">(320)</span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-on-surface line-clamp-2 leading-snug">Pastel Cloud Daily Planner 2025</h3>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-numeric-price text-numeric-price font-extrabold text-primary">Rp 68.000</span>
+<span class="font-body-sm text-[11px] text-outline line-through">Rp 85.000</span>
+</div>
+<button class="w-full mt-2.5 py-2 px-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" onclick="addToCartAnimation(this, 'Pastel Cloud Planner')" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>+ Keranjang</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-[3px_3px_0_#121216] overflow-hidden group">
+<div class="relative w-full h-36 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Retro click gel pen set 0.5mm 5 pieces with vintage muted pastel colors body and fast drying black gel ink" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgmoEOMRyc9ozo-I4Y30BDGgFAz-8YAZQj2otQGzWd8R38lj-NjcFUta_kd99g91fM1I0ephlLAsJZG7UIZOgyzrUN7VHzZ-9pMN0y7CWwFf2rWNydl_XEq39ssvGdIMhwdoZfr0HodiBcsqs_6wOm5JmgUKzGPAprnuKILvCq0QQ7kFm4cTMJRzct2lE0LExeidugFnL_7wGoztMf3vlg_6cPkgPL8NkaRnIGBg"/>
+<span class="absolute top-2 left-2 bg-tertiary-container text-on-tertiary-container font-label-md text-[10px] font-bold px-1.5 py-0.5 rounded shadow-[1.5px_1.5px_0_#121216]">
+            Pilihan Guru
+          </span>
+<button aria-label="Tambah favorit" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-[#f6d56a]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-[11px] text-on-surface font-bold">4.8</span>
+<span class="text-on-surface-variant text-[10px]">(512)</span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-on-surface line-clamp-2 leading-snug">Retro Click Gel Pen Set 0.5mm</h3>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-numeric-price text-numeric-price font-extrabold text-primary">Rp 38.500</span>
+</div>
+<button class="w-full mt-2.5 py-2 px-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" onclick="addToCartAnimation(this, 'Retro Gel Pen')" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>+ Keranjang</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-[3px_3px_0_#121216] overflow-hidden group">
+<div class="relative w-full h-36 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cute mini ceramic tulip flower shaped pen holder on pastel desk with cute pens inside aesthetic handmade pottery look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGavRX6jg27d_1DDjHgZ0VdS8K6HKdjbnLE5T9JAk9rtYvsw24DyZ2oXpXDEESg_w0gshv3YPYHn8O4o4jtS8IxnH_0-Tsa0y4xFvadyHYY-cHsdwWxhBo9yk4xQYWHZs-GQZQdEWbEEzvwugcDCA-t28lR-rINzJ5n9t_w3MaVlT0jJazznggzd2gARAyPbSweAKiXPj5p9hl57iGf1dNbGoKQe7YXH_ZfLiUDQ"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-md text-[10px] font-bold px-1.5 py-0.5 rounded shadow-[1.5px_1.5px_0_#121216]">
+            Sisa 4!
+          </span>
+<button aria-label="Tambah favorit" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-[#f6d56a]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-[11px] text-on-surface font-bold">5.0</span>
+<span class="text-on-surface-variant text-[10px]">(98)</span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-on-surface line-clamp-2 leading-snug">Mini Tulip Ceramic Pen Holder</h3>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-numeric-price text-numeric-price font-extrabold text-primary">Rp 52.000</span>
+</div>
+<button class="w-full mt-2.5 py-2 px-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" onclick="addToCartAnimation(this, 'Tulip Pen Holder')" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">add_shopping_cart</span>
+<span>+ Keranjang</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-[3px_3px_0_#121216] overflow-hidden group">
+<div class="relative w-full h-36 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Gradient pastel sticky notes and index tabs morandi tones translucent waterproof flags stationery set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2TLIEUA2ocHoco55TJVvKBEGxaZ-1lATvfwHI3SMQvrU6-8lx5L9TTmH4x8UShVqEoONX13gSzmlJAh8q08DM9DA0hoUJTSrh4weWc3T_qG9yEqhdm5T67dh6NMBAtAeg4xe6CCVH3Dc93mIjSfUg0aUZJ5z8ou5lZvV0FKgNETsaI8EpmUvivp6b7Ga7eLD-KF_iCnFzPeVmgCnY6HrZUj5HymWjQEWBmos-DQ"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-md text-[10px] font-bold px-1.5 py-0.5 rounded shadow-[1.5px_1.5px_0_#121216]">
+            -21%
+          </span>
+<button aria-label="Tambah favorit" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[13px] text-[#f6d56a]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-[11px] text-on-surface font-bold">4.9</span>
+<span class="text-on-surface-variant text-[10px]">(640)</span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-on-surface line-clamp-2 leading-snug">Gradient Sticky Notes & Tabs</h3>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5 flex-wrap">
+<span class="font-numeric-price text-numeric-price font-extrabold text-primary">Rp 22.000</span>
+<span class="font-body-sm text-[11px] text-outline line-through">Rp 28.000</span>
+</div>
+<button class="w-full mt-2.5 py-2 px-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" onclick="addToCartAnimation(this, 'Gradient Sticky Notes')" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">add_shopping_cart</span>
+<span>+ Keranjang</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promo Banner Hadiah Gemas (Split Panel / High Visual Impact) -->
+<section class="relative w-full rounded-2xl bg-gradient-to-r from-secondary-container via-surface-container-high to-surface-container p-4 shadow-[3px_3px_0_#121216] overflow-hidden">
+<div class="flex items-start justify-between gap-3">
+<div class="flex flex-col gap-1.5 flex-1 z-10">
+<div class="inline-flex items-center gap-1 bg-surface-container-lowest/80 px-2 py-0.5 rounded-md self-start text-secondary font-label-md text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px]">celebration</span>
+          Bisa Custom Nama
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">
+          Paket Hadiah Gemas Siap Kirim! 🎁
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Free box cantik, pita satin, plus custom kartu ucapan tulisan tangan untuk sahabatmu.
+        </p>
+<div class="pt-2">
+<button class="inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-3.5 py-2 rounded-xl font-label-md text-label-md font-bold shadow-[2px_2px_0_#121216] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" type="button">
+<span>Pilih Paket Kado</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 shadow-[2px_2px_0_#121216] relative mt-1">
+<img class="w-full h-full object-cover" data-alt="Aesthetic wrapped stationery gift box tied with cute pink satin ribbon, greeting card with wax seal stamp, dried flowers decoration on dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1qhiIKNblA2ZwzCrkXAr9yLpCrKUsQl5uwC38Tg5lDrOmVDvodilcTdmJMzlOefoKJaScR6ThgcPC3PZHUEK8SPArgHtYegyt_r0CGy0MTq8w5mB58zQsffXFYwBu0WE0Wtp_s_yd8N1lbRpFAlKeX55OFELWQkpeOE1Mwu18Q8ouKmUYqfj_e-MGAzD0aTnoTle7Qq-8EFnEQFnknqL17adZV9IosoyyWyclSw"/>
+<div class="absolute inset-0 bg-secondary/10"></div>
+</div>
+</div>
+</section>
+<!-- Section "Baru Mendarat Nih!" -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-tertiary">flight_land</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Baru Mendarat Nih!</h2>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-0.5" data-path="katalog-produk" href="#">
+        Lihat Semua <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<!-- 2-Column Responsive New Arrival Grid -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Item 1 -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-[3px_3px_0_#121216] overflow-hidden group">
+<div class="relative w-full h-32 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Botanical vintage washi tape box containing 10 assorted rolls with floral patterns, leaves, and pastel foil accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQq7U_Aq-K4Zr8vU1rWuIGapNK1GXU9BgWO2b2j4xKq8Y57TXH6SZO2DOQlyaS4TsfysDtyIZ7sbhfcuuhrZHF9v4HRWlzFN7pmXfEEFJX_-QxKeKpo8pA098Bf1SRZt_PUEB4cmo_eVvOkJ3NCK72bDarkC66LDfo97QYN5S9-rhTAxS4jQEkzuv5t6lf8HfMhnU7W-XTurCpIIAtA3p_QXpS0eF5kKoINqyHbA"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-md text-[10px] font-bold px-1.5 py-0.5 rounded shadow-[1.5px_1.5px_0_#121216]">
+            NEW
+          </span>
+</div>
+<div class="p-3 flex flex-col justify-between flex-1 gap-2">
+<div>
+<h4 class="font-body-md text-body-md font-bold text-on-surface line-clamp-1 leading-snug">Botanical Washi Tape Box</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Isi 10 Roll Cantik</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-numeric-price text-[16px] font-extrabold text-primary">Rp 32.000</span>
+<button aria-label="Tambah Botanical Washi Tape" class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-[1.5px_1.5px_0_#121216] active:translate-x-[1px] active:translate-y-[1px] transition-all" onclick="addToCartAnimation(this, 'Washi Tape Box')" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-[3px_3px_0_#121216] overflow-hidden group">
+<div class="relative w-full h-32 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cloud shaped portable mini safety scissors in pastel blue with protective cap, stationery craft tool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLwFGk_L9zety3p8tv6KeZqvbCY3mJWD8kaZdT74mV3Pwr9e8J2V8lXvnqlNAbrNsyZDoFzmgDtMaX8GPdHQWGX-QTYLbFNImBNByLG3qZPEmcjAQ8BU7fxT4hscHszIJ0Ap_2si-GtvIQR3KKjgTbz9Lzd4oxbXzuR93f8Xwk_To8I6IUt_44IMICEjuc89fFOmHuLxfvUN5Vt9Tn8Hv78TIXADWO_J0Ug8Ux4Q"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-md text-[10px] font-bold px-1.5 py-0.5 rounded shadow-[1.5px_1.5px_0_#121216]">
+            NEW
+          </span>
+</div>
+<div class="p-3 flex flex-col justify-between flex-1 gap-2">
+<div>
+<h4 class="font-body-md text-body-md font-bold text-on-surface line-clamp-1 leading-snug">Cloud Mini Safety Scissors</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Kecil & Aman di Pouch</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-numeric-price text-[16px] font-extrabold text-primary">Rp 26.500</span>
+<button aria-label="Tambah Cloud Scissors" class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-[1.5px_1.5px_0_#121216] active:translate-x-[1px] active:translate-y-[1px] transition-all" onclick="addToCartAnimation(this, 'Cloud Scissors')" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-[3px_3px_0_#121216] overflow-hidden group">
+<div class="relative w-full h-32 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Matcha green corduroy pencil case pouch with smooth metal zipper and spacious compartments on minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrq60X-y8vPBP2uFUbX8ymLQD1Y8xvhOge9MX3qDnk_AGz8pVPw5A-PLr5B3aFiKytfPZv3jjYZxQavKAyUaDfHldV0dgDftIRZtpymVLJ7BsRJCZd5XJRElbb-3Q9MPnltukT2ZIabC1oqp6Hm4hHaPGE3ITmM1kqEhQm3h3h3mbF6NyiAd1soej50PsVdN-L1FXUhuTNcCHA6ThXN18VCsJZYLbmyKPndPjkgg"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-md text-[10px] font-bold px-1.5 py-0.5 rounded shadow-[1.5px_1.5px_0_#121216]">
+            NEW
+          </span>
+</div>
+<div class="p-3 flex flex-col justify-between flex-1 gap-2">
+<div>
+<h4 class="font-body-md text-body-md font-bold text-on-surface line-clamp-1 leading-snug">Matcha Corduroy Pouch</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Muat 40+ Alat Tulis</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-numeric-price text-[16px] font-extrabold text-primary">Rp 48.000</span>
+<button aria-label="Tambah Matcha Corduroy Pouch" class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-[1.5px_1.5px_0_#121216] active:translate-x-[1px] active:translate-y-[1px] transition-all" onclick="addToCartAnimation(this, 'Matcha Pouch')" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col bg-surface-container rounded-xl shadow-[3px_3px_0_#121216] overflow-hidden group">
+<div class="relative w-full h-32 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Aesthetic clear silicone stamp sheet with daily planner bullet journal icons and vintage brown ink pad set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHZDiEihQLHf4WflR73zzi8UBCD-9ZTgM6axPY2nbqxAiuydk4BiqZwx15Cv-Yb4EBLqJshSatEyNxlsYe96KpQJg5ewSpXdyW2IAOLjRZO45dPip7EakrUNzYVYdqBWTNwEhuVpfRf7lV1STakQw18R7mZK90WrQ5zHUdLlzjV2BXH-girjUcTWywfIp4bO8nKpC2Z8zPp1HmMKbxrerBWyGmFWQMhM58GTvHzA"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-md text-[10px] font-bold px-1.5 py-0.5 rounded shadow-[1.5px_1.5px_0_#121216]">
+            NEW
+          </span>
+</div>
+<div class="p-3 flex flex-col justify-between flex-1 gap-2">
+<div>
+<h4 class="font-body-md text-body-md font-bold text-on-surface line-clamp-1 leading-snug">Aesthetic Clear Stamp & Ink</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Journaling Must-Have</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-numeric-price text-[16px] font-extrabold text-primary">Rp 36.000</span>
+<button aria-label="Tambah Clear Stamp" class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-[1.5px_1.5px_0_#121216] active:translate-x-[1px] active:translate-y-[1px] transition-all" onclick="addToCartAnimation(this, 'Clear Stamp')" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges (4 Cards Horizontal / Compact Mosaic) -->
+<section class="grid grid-cols-2 gap-2.5 pt-1">
+<div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container shadow-[2px_2px_0_#121216]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-[12px] font-bold text-on-surface truncate">Pengiriman Cepat</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">Order < 14:00 dikirim hari ini</p>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container shadow-[2px_2px_0_#121216]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-[12px] font-bold text-on-surface truncate">Free Stiker Gemas</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">Setiap transaksi min. Rp 30rb</p>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container shadow-[2px_2px_0_#121216]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-[12px] font-bold text-on-surface truncate">CS Ramah</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">Balas cepat 08:00 - 22:00</p>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container shadow-[2px_2px_0_#121216]">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-[#f6d56a] flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-[12px] font-bold text-on-surface truncate">Garansi Aman</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">Ganti baru jika barang rusak</p>
+</div>
+</div>
+</section>
+<!-- Interactive Floating Toast Container for Micro-delight feedback -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-opacity duration-300" id="toast-notif">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md text-on-surface px-4 py-2.5 rounded-full shadow-[3px_3px_0_#121216] flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="font-label-md text-[12px]" id="toast-text">Item berhasil ditambahkan!</span>
+</div>
+</div>
+</div>
+<script>
+  function showToast(message) {
+    const toast = document.getElementById('toast-notif');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+    toastText.textContent = message;
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2200);
+  }
+
+  function addToCartAnimation(button, itemName) {
+    // Pulse microinteraction
+    button.classList.add('scale-95');
+    setTimeout(() => button.classList.remove('scale-95'), 150);
+
+    // Update cart badge visually in the App Shell if exists
+    const cartBadges = document.querySelectorAll('header span.bg-secondary, nav span.bg-secondary');
+    cartBadges.forEach(badge => {
+      const current = parseInt(badge.textContent || '3', 10);
+      if (!isNaN(current)) {
+        badge.textContent = current + 1;
+        badge.classList.add('animate-bounce');
+        setTimeout(() => badge.classList.remove('animate-bounce'), 800);
+      }
+    });
+
+    showToast(`${itemName} masuk ke keranjang! ✨`);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-primary-container bg-surface-container-highest/80 shadow-[0_0_12px_rgba(179,154,240,0.35)]"><div class="flex items-center justify-around h-20 px-gutter"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] px-space-xs py-1 rounded-xl transition-all text-primary-container bg-surface-container-highest/80 shadow-[0_0_12px_rgba(179,154,240,0.35)]" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">cottage</span><span class="font-label-md text-label-md leading-none">Beranda</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-all" data-path="katalog-produk" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-md text-label-md leading-none">Katalog</span></a><a class="relative flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-all" data-path="keranjang" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_cart</span><span class="absolute -top-1.5 -right-2.5 min-w-[16px] h-[16px] px-1 bg-secondary text-on-secondary font-label-md text-[9px] leading-tight flex items-center justify-center rounded-full">3</span></div><span class="font-label-md text-label-md leading-none">Keranjang</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-all" data-path="akun-bantuan" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-md text-label-md leading-none">Akun</span></a></div></nav></body></html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MayurienShop</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700;800&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'primary': '#674ba7', 'tertiary-fixed-dim': '#e8c346', 'tertiary-fixed': '#ffe081', 'on-tertiary': '#ffffff', 'on-secondary-container': '#792248', 'tertiary': '#725c00', 'surface-container-low': '#f6f3f2', 'on-secondary-fixed': '#3e001f', 'on-primary-fixed': '#24005b', 'inverse-primary': '#d1bcff', 'secondary-fixed-dim': '#ffb0ca', 'on-tertiary-fixed-variant': '#564500', 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#513490', 'on-surface': '#1c1b1b', 'secondary': '#9b3e64', 'secondary-container': '#fe8eb7', 'inverse-surface': '#313030', 'on-secondary-fixed-variant': '#7d264c', 'on-secondary': '#ffffff', 'on-tertiary-fixed': '#231b00', 'surface-bright': '#fcf9f8', 'primary-fixed': '#eaddff', 'error': '#ba1a1a', 'surface-container-highest': '#e5e2e1', 'on-primary-container': '#fffbff', 'outline': '#7a7582', 'on-background': '#1c1b1b', 'secondary-fixed': '#ffd9e3', 'on-error-container': '#93000a', 'primary-fixed-dim': '#d1bcff', 'surface-container': '#f0eded', 'primary-container': '#8064c2', 'on-error': '#ffffff', 'on-primary': '#ffffff', 'surface-container-high': '#eae7e7', 'background': '#fcf9f8', 'outline-variant': '#cbc4d3', 'tertiary-container': '#caa82c', 'on-tertiary-container': '#4e3e00', 'error-container': '#ffdad6', 'surface-dim': '#dcd9d9', 'surface': '#fcf9f8', 'inverse-on-surface': '#f3f0ef', 'surface-variant': '#e5e2e1', 'surface-tint': '#6a4da9', 'on-surface-variant': '#494551' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-lg': '1.5rem', 'margin-tablet': '2rem', 'margin': '1rem', 'space-xs': '0.25rem', 'space-sm': '0.5rem', 'space-xl': '2.5rem', 'margin-desktop': '3rem', 'gutter-desktop': '1.5rem', 'space-md': '1rem', 'gutter': '1rem' }, fontFamily: { 'currency-price': ['Nunito Sans'], 'body-lg': ['Nunito Sans'], 'display-hero-mobile': ['Quicksand'], 'label-lg': ['Nunito Sans'], 'headline-lg-mobile': ['Quicksand'], 'title-md': ['Quicksand'], 'body-sm': ['Nunito Sans'], 'headline-sm': ['Quicksand'], 'display-hero': ['Quicksand'], 'body-md': ['Nunito Sans'], 'headline-lg': ['Quicksand'], 'headline-md': ['Quicksand'], 'label-md': ['Nunito Sans'], 'fredoka': ['Fredoka', 'sans-serif'] }, fontSize: { 'currency-price': ['16px', { lineHeight: '22px', letterSpacing: '0.01em', fontWeight: '800' }], 'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }], 'display-hero-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.02em', fontWeight: '700' }], 'headline-lg-mobile': ['24px', { lineHeight: '32px', fontWeight: '700' }], 'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'display-hero': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }], 'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.03em', fontWeight: '700' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="font-fredoka text-headline-sm text-primary tracking-tight font-bold">Mayurien<span class="text-secondary font-fredoka">Shop</span></span></div><div class="flex items-center gap-space-xs"><button aria-label="Pencarian" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">search</span></button><button aria-label="Ubah Tema" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-tertiary transition-colors"><span class="material-symbols-outlined text-[24px]">light_mode</span></button><a aria-label="Keranjang Belanja" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" data-path="keranjang" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1 right-1 w-5 h-5 bg-secondary text-on-secondary rounded-full flex items-center justify-center text-[11px] font-bold font-currency-price">3</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-28">
+<!-- Top Cart Header Bar & Urgent Stock Timer -->
+<div class="px-margin pt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">Keranjang Belanja</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-[#FFE081] text-[#3E001F] border border-[#171717] shadow-[2px_2px_0px_#171717]">
+          🛒 3 Item
+        </span>
+</div>
+<button class="text-secondary hover:text-on-secondary-container text-body-sm font-label-md flex items-center gap-1 transition-transform active:scale-95" id="btn-empty-cart">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+        Kosongkan
+      </button>
+</div>
+<!-- Countdown reservation strip -->
+<div class="flex items-center justify-between px-3 py-2 bg-surface-container-lowest rounded-lg border border-[#171717] shadow-[2px_2px_0px_#171717]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">timer</span>
+<span class="text-body-sm font-body-sm text-on-surface">Stok pesanan diamankan:</span>
+</div>
+<span class="font-currency-price text-currency-price text-primary font-bold tracking-wider" id="countdown-timer">59:42</span>
+</div>
+</div>
+<!-- Free Shipping Progress Tracker -->
+<div class="px-margin pt-space-sm">
+<div class="p-space-sm rounded-xl bg-[#F3EFFF] border border-[#171717] shadow-[3px_3px_0px_#171717] flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="text-base">🚚</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Belanja <span class="text-primary underline decoration-[#FF8FB8] decoration-2">Rp 21.000 lagi</span> untuk GRATIS ONGKIR!</span>
+</div>
+</div>
+<!-- Tactile progress gauge -->
+<div class="w-full h-3.5 bg-surface-container-lowest rounded-full border border-[#171717] p-0.5 relative overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-[#FF8FB8] rounded-full transition-all duration-500" style="width: 86%;"></div>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Rp 179.000 tercapai</span>
+<span class="font-bold text-on-surface">Target: Rp 200.000</span>
+</div>
+</div>
+</div>
+<!-- Cart Product Items List -->
+<div class="px-margin pt-space-md flex flex-col gap-space-sm">
+<!-- Item 1: Pastel Cloud Daily Planner -->
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex gap-3 relative transition-all" id="cart-item-1">
+<!-- Checkbox selector -->
+<div class="pt-1">
+<input checked="" class="w-4 h-4 rounded border-[#171717] accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<!-- Product visual thumbnail -->
+<div class="w-20 h-20 rounded-lg overflow-hidden border border-[#171717] bg-[#EADDFF] shrink-0">
+<img class="w-full h-full object-cover" data-alt="Pastel lilac daily bullet journal notebook with cloud embossing resting on a clean aesthetic desk with stationery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMKSw_89WAaH8sxMwQO4qMQc7yqtGWx9sEpvDW6k3K6Od3zJbzEv3LJsFW4sxud5IigObgcj8_M3uHXalF23GG49uxS1C0iqshcYtjcktWo-wpEPe_o7uRXEdbYUDR3EMdmWDFwY582sYCIDYy_NzeuzW26BUfKoGiEklZxZza-P9Rr9OJhOFAO4-Xuy8GLL6BT0f0dOZGZYdlhnDouRdpjmbMHyiQp_J4Rjk9-Q"/>
+</div>
+<!-- Item Meta & Stepper -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div class="flex justify-between items-start gap-1">
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-on-surface font-bold truncate">Pastel Cloud Daily Planner 2025</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lilac Cloud / Grid Paper</p>
+</div>
+<button aria-label="Hapus Planner" class="text-outline hover:text-error transition-colors p-1" onclick="document.getElementById('cart-item-1').remove()">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-currency-price text-currency-price text-on-surface">Rp 68.000</span>
+<!-- Stepper neobrutalism -->
+<div class="flex items-center bg-surface-container-low rounded-lg border border-[#171717] overflow-hidden shadow-[1.5px_1.5px_0px_#171717]">
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:bg-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="w-7 text-center font-currency-price text-body-md font-bold text-on-surface">1</span>
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:bg-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Vintage Morandi Gel Pen (Set of 5) -->
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex gap-3 relative transition-all" id="cart-item-2">
+<div class="pt-1">
+<input checked="" class="w-4 h-4 rounded border-[#171717] accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<div class="w-20 h-20 rounded-lg overflow-hidden border border-[#171717] bg-[#FFD9E3] shrink-0">
+<img class="w-full h-full object-cover" data-alt="Set of 5 Morandi vintage aesthetic pastel gel pens packaged inside transparent aesthetic pouch on minimal surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALqx8tozSFHziWGGzZ_MCbwEpQdx2ltFuV1hbIdL4Jbsjo_21FeIMw-9U1TlBnUibT6OczLKTrgNjkPPrHKhhG1k1Ehr79CVd0SgETf_ZqIb3OyuxZ9SYIsrByuv1b5rlS0GJUvoVvwmuO6Ab8SPU4Sb5TZErZX8RJntAp_Y4zgYj2nDngs3ZcUsuzq0M4cAosjbrkM-ci13kX4NRYTY7qapkFsiex72bpC7UUcw"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div class="flex justify-between items-start gap-1">
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-on-surface font-bold truncate">Vintage Morandi Gel Pen 0.5mm</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Soft Pastel Edition (Set 5)</p>
+</div>
+<button aria-label="Hapus Pen" class="text-outline hover:text-error transition-colors p-1" onclick="document.getElementById('cart-item-2').remove()">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-currency-price text-currency-price text-on-surface">Rp 77.000</span>
+<span class="text-[11px] font-body-sm text-on-surface-variant">@ Rp 38.500</span>
+</div>
+<div class="flex items-center bg-surface-container-low rounded-lg border border-[#171717] overflow-hidden shadow-[1.5px_1.5px_0px_#171717]">
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:bg-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="w-7 text-center font-currency-price text-body-md font-bold text-on-surface">2</span>
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:bg-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Mini Tulip Ceramic Pen Holder -->
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex gap-3 relative transition-all" id="cart-item-3">
+<div class="pt-1">
+<input checked="" class="w-4 h-4 rounded border-[#171717] accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<div class="w-20 h-20 rounded-lg overflow-hidden border border-[#171717] bg-[#FFE081] shrink-0">
+<img class="w-full h-full object-cover" data-alt="Charming ceramic desk organizer shaped like a yellow tulip bud holding brushes and stationery aesthetic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT9c3suOi6vfBHsfOKdq2EOCu2pNA3KBcxZaGPIbiYRZ3ED4vOnrh2PgTe1Dgo3pTIs1HZCcOQ7_ZC6PlNYqRdeW4DBHk2RIjVpUntxwR599ltBwQoiKf3sNFQLG7kxgT9fJJU5qeEsPvShcR8UywMV75L_ObQvfaFNoi6I0seoQWb8zOR9qup6svNalhq229Xe9KZiV6FbSSXoPNvt10BEX-wxtweYpCQEOIi7g"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div class="flex justify-between items-start gap-1">
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-on-surface font-bold truncate">Mini Tulip Ceramic Pen Holder</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Buttercup Yellow</p>
+</div>
+<button aria-label="Hapus Organizer" class="text-outline hover:text-error transition-colors p-1" onclick="document.getElementById('cart-item-3').remove()">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-currency-price text-currency-price text-on-surface">Rp 52.000</span>
+<div class="flex items-center bg-surface-container-low rounded-lg border border-[#171717] overflow-hidden shadow-[1.5px_1.5px_0px_#171717]">
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:bg-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="w-7 text-center font-currency-price text-body-md font-bold text-on-surface">1</span>
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:bg-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Coupon Code & Discount Section -->
+<div class="px-margin pt-space-md">
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex flex-col gap-2.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">sell</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Voucher Toko Mayurien</span>
+</div>
+<!-- Voucher Input Bar -->
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full h-11 px-3 bg-surface-container-low rounded-lg border border-[#171717] font-currency-price text-label-lg uppercase tracking-wider text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[2px_2px_0px_#171717]" id="voucher-input" placeholder="Masukkan Kode" type="text" value="GEMAS15"/>
+<span class="absolute right-3 top-3 text-[14px] text-primary material-symbols-outlined">check_circle</span>
+</div>
+<button class="h-11 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold border border-[#171717] shadow-[2px_2px_0px_#171717] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" id="btn-apply-voucher">
+          Terapkan
+        </button>
+</div>
+<!-- Active Voucher Confirmation Chip -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-[#EADDFF] border border-dashed border-[#171717]">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md font-bold text-on-primary-fixed-variant">Voucher GEMAS15 (-Rp 15.000) aktif! 🎉</span>
+</div>
+<button class="text-secondary font-bold text-xs hover:underline">Lepas</button>
+</div>
+</div>
+</div>
+<!-- Surprise Bonus Freebie Banner -->
+<div class="px-margin pt-space-sm">
+<div class="p-3 bg-[#FFF0F5] rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 border border-[#171717]">
+<span class="text-lg">🎁</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-lg text-label-lg font-bold text-secondary">Gratis Sticker Pack!</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] bg-secondary-container text-on-secondary-container font-bold">Auto Klaim</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Semua pesanan tanpa min. belanja dapat 1 set stiker hologram gemas edisi Mayurien.</p>
+</div>
+</div>
+</div>
+<!-- Order Financial Summary -->
+<div class="px-margin pt-space-md">
+<div class="p-4 bg-surface-container-lowest rounded-xl border border-[#171717] shadow-[3px_3px_0px_#171717] flex flex-col gap-2.5">
+<h3 class="font-headline-sm text-title-md font-bold text-on-surface">Rincian Pembayaran</h3>
+<div class="flex flex-col gap-1.5 text-body-md font-body-md">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Total Harga Produk (4 pcs)</span>
+<span class="font-currency-price text-on-surface">Rp 197.000</span>
+</div>
+<div class="flex justify-between items-center text-secondary">
+<div class="flex items-center gap-1">
+<span>Diskon Promo Toko</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary-fixed border border-[#171717] font-bold">GEMAS15</span>
+</div>
+<span class="font-currency-price font-bold">-Rp 15.000</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Estimasi Ongkos Kirim</span>
+<div class="flex items-center gap-1.5">
+<span class="line-through text-outline text-body-sm">Rp 12.000</span>
+<span class="font-currency-price font-bold text-primary">Rp 12.000</span>
+</div>
+</div>
+<div class="w-full my-1 border-t border-dashed border-[#171717]"></div>
+<div class="flex justify-between items-baseline pt-1">
+<div>
+<span class="font-title-md text-title-md font-bold text-on-surface">Total Tagihan</span>
+<p class="text-[11px] font-bold text-secondary font-label-md">Hemat Rp 15.000 pada belanja ini</p>
+</div>
+<span class="font-display-hero-mobile text-headline-sm text-primary font-bold">Rp 194.000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Checkout CTA Action Dock -->
+<div class="fixed bottom-16 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md px-margin py-3 border-t-2 border-[#171717] shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+<div class="flex flex-col gap-2 max-w-lg mx-auto">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Total Checkout:</span>
+<span class="font-currency-price text-headline-sm text-primary font-bold">Rp 194.000</span>
+</div>
+<!-- Master Neobrutalist Action Button -->
+<button class="h-12 px-6 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold border border-[#171717] shadow-[3px_3px_0px_#171717] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none hover:bg-primary-container transition-all flex items-center gap-2" id="btn-checkout">
+<span>Lanjut ke Pembayaran</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Trust Badges -->
+<div class="flex items-center justify-center gap-1.5 text-[11px] font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span>
+<span>100% Pembayaran Aman (QRIS, BCA, Mandiri, ShopeePay)</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // 60-minute reservation countdown timer simulation
+    let secondsLeft = 59 * 60 + 42;
+    const timerElem = document.getElementById('countdown-timer');
+
+    if (timerElem) {
+      setInterval(() => {
+        if (secondsLeft > 0) {
+          secondsLeft--;
+          const m = Math.floor(secondsLeft / 60);
+          const s = secondsLeft % 60;
+          timerElem.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+      }, 1000);
+    }
+
+    // Checkout button delightful micro-feedback
+    const checkoutBtn = document.getElementById('btn-checkout');
+    if (checkoutBtn) {
+      checkoutBtn.addEventListener('click', function() {
+        this.classList.add('scale-95');
+        setTimeout(() => this.classList.remove('scale-95'), 150);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="beranda" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-md text-label-md mt-0.5">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="katalog" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-md text-label-md mt-0.5">Katalog</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] py-1 transition-all relative text-primary font-bold" data-path="keranjang" href="#"><span class="material-symbols-outlined text-[22px]">local_mall</span><span class="font-label-md text-label-md mt-0.5">Keranjang</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="akun" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-md text-label-md mt-0.5">Akun</span></a></div></nav></body></html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>MayurienShop</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700;800&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'primary': '#674ba7', 'tertiary-fixed-dim': '#e8c346', 'tertiary-fixed': '#ffe081', 'on-tertiary': '#ffffff', 'on-secondary-container': '#792248', 'tertiary': '#725c00', 'surface-container-low': '#f6f3f2', 'on-secondary-fixed': '#3e001f', 'on-primary-fixed': '#24005b', 'inverse-primary': '#d1bcff', 'secondary-fixed-dim': '#ffb0ca', 'on-tertiary-fixed-variant': '#564500', 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#513490', 'on-surface': '#1c1b1b', 'secondary': '#9b3e64', 'secondary-container': '#fe8eb7', 'inverse-surface': '#313030', 'on-secondary-fixed-variant': '#7d264c', 'on-secondary': '#ffffff', 'on-tertiary-fixed': '#231b00', 'surface-bright': '#fcf9f8', 'primary-fixed': '#eaddff', 'error': '#ba1a1a', 'surface-container-highest': '#e5e2e1', 'on-primary-container': '#fffbff', 'outline': '#7a7582', 'on-background': '#1c1b1b', 'secondary-fixed': '#ffd9e3', 'on-error-container': '#93000a', 'primary-fixed-dim': '#d1bcff', 'surface-container': '#f0eded', 'primary-container': '#8064c2', 'on-error': '#ffffff', 'on-primary': '#ffffff', 'surface-container-high': '#eae7e7', 'background': '#fcf9f8', 'outline-variant': '#cbc4d3', 'tertiary-container': '#caa82c', 'on-tertiary-container': '#4e3e00', 'error-container': '#ffdad6', 'surface-dim': '#dcd9d9', 'surface': '#fcf9f8', 'inverse-on-surface': '#f3f0ef', 'surface-variant': '#e5e2e1', 'surface-tint': '#6a4da9', 'on-surface-variant': '#494551' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-lg': '1.5rem', 'margin-tablet': '2rem', 'margin': '1rem', 'space-xs': '0.25rem', 'space-sm': '0.5rem', 'space-xl': '2.5rem', 'margin-desktop': '3rem', 'gutter-desktop': '1.5rem', 'space-md': '1rem', 'gutter': '1rem' }, fontFamily: { 'currency-price': ['Nunito Sans'], 'body-lg': ['Nunito Sans'], 'display-hero-mobile': ['Quicksand'], 'label-lg': ['Nunito Sans'], 'headline-lg-mobile': ['Quicksand'], 'title-md': ['Quicksand'], 'body-sm': ['Nunito Sans'], 'headline-sm': ['Quicksand'], 'display-hero': ['Quicksand'], 'body-md': ['Nunito Sans'], 'headline-lg': ['Quicksand'], 'headline-md': ['Quicksand'], 'label-md': ['Nunito Sans'], 'fredoka': ['Fredoka', 'sans-serif'] }, fontSize: { 'currency-price': ['16px', { lineHeight: '22px', letterSpacing: '0.01em', fontWeight: '800' }], 'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }], 'display-hero-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.02em', fontWeight: '700' }], 'headline-lg-mobile': ['24px', { lineHeight: '32px', fontWeight: '700' }], 'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'display-hero': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }], 'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.03em', fontWeight: '700' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><button aria-label="Kembali" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface truncate text-center flex-1 px-space-xs font-semibold">Checkout</h1><div class="flex items-center gap-space-xs"><button aria-label="Menu Opsi" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-36">
+<!-- Stepper Alur Pembayaran -->
+<div class="px-margin pt-space-sm pb-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-[3px_3px_0px_#171717] flex items-center justify-between">
+<!-- Step 1: Done -->
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-currency-price text-body-sm shadow-[1.5px_1.5px_0px_#171717]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface line-through opacity-70">Keranjang</span>
+</div>
+<div class="h-[2px] flex-1 mx-2 bg-on-surface/20"></div>
+<!-- Step 2: Active -->
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-currency-price text-body-sm shadow-[1.5px_1.5px_0px_#171717]">
+          2
+        </div>
+<span class="font-headline-sm text-label-lg text-primary font-bold">Bayar</span>
+</div>
+<div class="h-[2px] flex-1 mx-2 bg-on-surface/20"></div>
+<!-- Step 3: Pending -->
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center font-currency-price text-body-sm">
+          3
+        </div>
+<span class="font-label-md text-label-md text-outline">Selesai</span>
+</div>
+</div>
+</div>
+<!-- Banner Info Promo Beruntun -->
+<div class="px-margin mt-space-sm">
+<div class="bg-secondary-fixed text-on-secondary-fixed p-space-sm rounded-xl shadow-[3px_3px_0px_#171717] flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-[20px] shadow-[2px_2px_0px_#171717] shrink-0">
+        🎉
+      </div>
+<div class="min-w-0 flex-1">
+<p class="font-headline-sm text-body-md font-bold text-on-secondary-fixed leading-tight">Voucher Otomatis Terpasang!</p>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant truncate">Potongan ongkir Rp10.000 &amp; Diskon belanja Rp15.000</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">auto_fix_high</span>
+</div>
+</div>
+<!-- Card 1: Informasi Kontak -->
+<div class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[3px_3px_0px_#171717] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">badge</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Informasi Kontak</h2>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md shadow-[2px_2px_0px_#171717] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-transform flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">edit</span> Ubah
+        </button>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-title-md text-on-surface">Nadia Putri</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md shadow-[1.5px_1.5px_0px_#171717] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span> VIP Member
+          </span>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">mail</span>
+<span>nadiaputri@gmail.com</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">chat</span>
+<span>+62 812-3456-7890 (WhatsApp Aktif)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Alamat Pengiriman -->
+<div class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[3px_3px_0px_#171717] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">pin_drop</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Alamat Pengiriman</h2>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md shadow-[2px_2px_0px_#171717] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-transform" type="button">
+          Pilih Lain
+        </button>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Nadia Putri (Rumah)</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md shadow-[1.5px_1.5px_0px_#171717]">
+            Utama
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+          JL. Melati No. 18, RT 04 / RW 02, Kebon Jeruk, Jakarta Barat, DKI Jakarta, 11530.
+        </p>
+<div class="flex items-start gap-1.5 bg-surface-container-lowest p-2 rounded-lg text-on-surface-variant font-body-sm text-body-sm shadow-[1.5px_1.5px_0px_#171717]">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container shrink-0 mt-0.5">sticky_note_2</span>
+<span class="italic text-on-surface-variant">Catatan: Pagar hitam samping pos satpam, titip paket ke pos bila tidak ada di tempat.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Pilihan Ekspedisi -->
+<div class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[3px_3px_0px_#171717] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pilihan Ekspedisi</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">3 Opsi Tersedia</span>
+</div>
+<div class="space-y-space-sm" id="shipping-options">
+<!-- Opsi 1 (Selected) -->
+<label class="cursor-pointer flex items-center justify-between p-space-sm rounded-lg bg-primary-fixed-dim text-on-surface shadow-[3px_3px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] transition-all">
+<div class="flex items-center gap-space-sm min-w-0">
+<input checked="" class="w-4 h-4 accent-primary" name="shipping" type="radio" value="12000"/>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-body-md font-bold text-on-primary-fixed">J&amp;T Express Regular</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md shadow-[1px_1px_0px_#171717]">Termurah</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant">Estimasi tiba besok sore (1x24 jam)</p>
+</div>
+</div>
+<span class="font-currency-price text-currency-price text-on-primary-fixed font-bold shrink-0 ml-2">Rp 12.000</span>
+</label>
+<!-- Opsi 2 -->
+<label class="cursor-pointer flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] transition-all">
+<div class="flex items-center gap-space-sm min-w-0">
+<input class="w-4 h-4 accent-primary" name="shipping" type="radio" value="18000"/>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">SiCepat BEST</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md shadow-[1px_1px_0px_#171717]">Next Day</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Garansi tiba esok sebelum jam 12:00</p>
+</div>
+</div>
+<span class="font-currency-price text-currency-price text-on-surface shrink-0 ml-2">Rp 18.000</span>
+</label>
+<!-- Opsi 3 -->
+<label class="cursor-pointer flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] transition-all">
+<div class="flex items-center gap-space-sm min-w-0">
+<input class="w-4 h-4 accent-primary" name="shipping" type="radio" value="25000"/>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">GoSend Instant</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md shadow-[1px_1px_0px_#171717]">Kilat</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tiba 2-3 jam setelah dipickup</p>
+</div>
+</div>
+<span class="font-currency-price text-currency-price text-on-surface shrink-0 ml-2">Rp 25.000</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Card 4: Cara Pembayaran -->
+<div class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[3px_3px_0px_#171717] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">payments</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Metode Pembayaran</h2>
+</div>
+<span class="font-label-md text-label-md text-tertiary-container font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px]">verified</span> Terverifikasi
+        </span>
+</div>
+<div class="space-y-space-sm" id="payment-options">
+<!-- Opsi 1 (Selected) QRIS -->
+<label class="cursor-pointer block p-space-sm rounded-lg bg-secondary-fixed text-on-secondary-fixed shadow-[3px_3px_0px_#171717] transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-space-sm">
+<input checked="" class="w-4 h-4 mt-1 accent-primary" name="payment" type="radio" value="qris"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md font-bold text-on-secondary-fixed">QRIS Instant Payment</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-[1px_1px_0px_#171717]">Bebas Biaya Admin</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant mt-0.5">Scan cepat via GoPay, OVO, ShopeePay, BCA, DANA</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">qr_code_scanner</span>
+</div>
+</label>
+<!-- Opsi 2: Virtual Account -->
+<label class="cursor-pointer block p-space-sm rounded-lg bg-surface-container-low text-on-surface shadow-[2px_2px_0px_#171717] transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-space-sm">
+<input class="w-4 h-4 mt-1 accent-primary" name="payment" type="radio" value="va"/>
+<div>
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Virtual Account Otomatis</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">BCA, Mandiri, BRI, BNI (Verifikasi 5 detik)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[24px]">account_balance</span>
+</div>
+</label>
+<!-- Opsi 3: Kartu Kredit / Debit -->
+<label class="cursor-pointer block p-space-sm rounded-lg bg-surface-container-low text-on-surface shadow-[2px_2px_0px_#171717] transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-space-sm">
+<input class="w-4 h-4 mt-1 accent-primary" name="payment" type="radio" value="cc"/>
+<div>
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Kartu Kredit / Debit Online</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Visa, Mastercard, JCB (3D Secure Safe)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[24px]">credit_card</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Card 5: Rincian Belanja Collapsible -->
+<div class="px-margin mt-space-md mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[3px_3px_0px_#171717] flex flex-col">
+<button class="w-full flex items-center justify-between text-left" id="toggle-summary-btn" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Rincian Belanja</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-md text-label-md text-on-surface">3 Produk</span>
+</div>
+<span class="material-symbols-outlined text-on-surface transition-transform duration-200" id="summary-chevron">expand_less</span>
+</button>
+<!-- Collapsible Items Section -->
+<div class="mt-space-md flex flex-col gap-space-sm" id="summary-content">
+<!-- Item 1 -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-2 rounded-lg">
+<div class="w-14 h-14 rounded-lg bg-primary-fixed shrink-0 overflow-hidden shadow-[1.5px_1.5px_0px_#171717]">
+<img class="w-full h-full object-cover" data-alt="Charming pastel bullet journal with metallic pen on a clean minimal desk, soft cozy warm lighting, aesthetic stationery photography, hyper detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy2mLL0F5T_x9DEyyH76E3s_DkIcBdkgUU2joU_ZPJl-NQ4oeuJSUqZAce-56f434i1QKyMdoGOsHgeBChRihgUzAnrK6VENcLBYdet1fatB3XwYhmymZKaFaJ469HX461gsVODgkjuwP2eNEiXygeRuRnmkIkuIt6ao7K9Ee0-Qi1bP4BCVSW389lZobM-y_O98u_FVaQkBkSCv3Zj33Ngkta5vGEKVun8y7I1g"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-body-md font-semibold text-on-surface truncate">Pastel Dream Journal 2025</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Variasi: Lavender Lilac (A5)</p>
+<div class="flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-outline">1x</span>
+<span class="font-currency-price text-currency-price text-on-surface">Rp 89.000</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-2 rounded-lg">
+<div class="w-14 h-14 rounded-lg bg-secondary-fixed shrink-0 overflow-hidden shadow-[1.5px_1.5px_0px_#171717]">
+<img class="w-full h-full object-cover" data-alt="Set of 5 Japanese mildliner pastel highlighters stationery arranged aesthetically on white ceramic tray, studio shot, pastel tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB38xOWz1-C-YiquFJyYb4Ma_yLz3llzlyO9A_MNVgZmUyk3CFFnLBz5eFm1ylrRHIOVS-PaOnvpxzzt8EDrXG0SxKMmEJuuWILVJeOPDlroC3KyybvSFuotcCKCA4sTZr_er5ohppP6Tw2aLeNVFx484kzI0TszI9ZlK6m0ajO8PJBRTcE-JXiwgsVXozHz8KgwFIVmGVJwRqeVNZhvnlGjYeehALqEuXD5c7tLg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-body-md font-semibold text-on-surface truncate">Sakura Washi Tape Set (5 pcs)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Variasi: Spring Blossom</p>
+<div class="flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-outline">1x</span>
+<span class="font-currency-price text-currency-price text-on-surface">Rp 48.000</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-2 rounded-lg">
+<div class="w-14 h-14 rounded-lg bg-tertiary-fixed shrink-0 overflow-hidden shadow-[1.5px_1.5px_0px_#171717]">
+<img class="w-full h-full object-cover" data-alt="Playful ceramic bear mug aesthetic desk lifestyle desk organizer pastel yellow aesthetic clean cozy atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArygShamC7d0cbYZ8cLhOV9PTYs4nY6ubq8pl7xnmxYDWiOArDdXzWL56WzIGWuWrj4BWVnZBDJnrqX9B1sQWm74Nr6-aEyrCGqHSS39H2fxpJVCXkkjxVXkNaMq9NpPGj5KKlgY0H1tFy34q6RZKHr581RA9mxDKD323vA0RdpnwmaJu-GOqH6vnmuFemhfl1-Pxsre_MvmLGHXz0JQAIfwhh1HAM8dj1pQq1eA"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-body-md font-semibold text-on-surface truncate">Ceramic Bear Desk Organizer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Variasi: Butter Yellow</p>
+<div class="flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-outline">1x</span>
+<span class="font-currency-price text-currency-price text-on-surface">Rp 60.000</span>
+</div>
+</div>
+</div>
+<!-- Divider Line -->
+<div class="h-[1px] bg-outline-variant/60 my-1"></div>
+<!-- Price Breakdown Rows -->
+<div class="space-y-1.5 font-body-md text-body-md">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal Produk</span>
+<span class="font-currency-price text-on-surface">Rp 197.000</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Ongkos Kirim (J&amp;T Regular)</span>
+<span class="font-currency-price text-on-surface" id="shipping-fee-display">Rp 12.000</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sell</span> Voucher Potongan
+            </span>
+<span class="font-currency-price">-Rp 15.000</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Biaya Layanan &amp; Asuransi</span>
+<span class="font-currency-price text-on-surface">Rp 1.000</span>
+</div>
+<div class="pt-2 flex justify-between items-baseline font-headline-sm text-headline-sm text-on-surface font-bold">
+<span>Total Tagihan</span>
+<span class="text-primary font-currency-price text-[22px]" id="total-price-display">Rp 195.000</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Checkout Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest p-space-md shadow-[0_-4px_16px_rgba(0,0,0,0.06)] pb-safe">
+<div class="max-w-md mx-auto flex flex-col gap-2">
+<!-- Guarantee Pill Info -->
+<div class="flex items-center justify-center gap-3 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">verified_user</span> Garansi Aman 100%
+        </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">inventory_2</span> Bubble Wrap Tebal
+        </span>
+</div>
+<!-- Action Button Group -->
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total Pembayaran</span>
+<span class="font-currency-price text-[22px] font-extrabold text-primary leading-tight" id="sticky-total">Rp 195.000</span>
+</div>
+<button class="flex-1 max-w-[210px] h-12 bg-primary text-on-primary rounded-xl font-headline-sm text-title-md font-bold shadow-[3px_3px_0px_#171717] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2" id="pay-button" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Bayar Sekarang</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Collapsible Logic
+    const toggleBtn = document.getElementById('toggle-summary-btn');
+    const content = document.getElementById('summary-content');
+    const chevron = document.getElementById('summary-chevron');
+
+    if (toggleBtn && content && chevron) {
+      toggleBtn.addEventListener('click', function() {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          chevron.textContent = 'expand_less';
+        } else {
+          content.classList.add('hidden');
+          chevron.textContent = 'expand_more';
+        }
+      });
+    }
+
+    // Shipping selection dynamic calculation
+    const shippingRadios = document.querySelectorAll('input[name="shipping"]');
+    const shippingFeeDisplay = document.getElementById('shipping-fee-display');
+    const totalPriceDisplay = document.getElementById('total-price-display');
+    const stickyTotal = document.getElementById('sticky-total');
+
+    const subtotal = 197000;
+    const discount = 15000;
+    const adminFee = 1000;
+
+    shippingRadios.forEach(function(radio) {
+      radio.addEventListener('change', function(e) {
+        // Highlight active radio card
+        shippingRadios.forEach(function(r) {
+          const parent = r.closest('label');
+          if (r.checked) {
+            parent.className = 'cursor-pointer flex items-center justify-between p-space-sm rounded-lg bg-primary-fixed-dim text-on-surface shadow-[3px_3px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] transition-all';
+          } else {
+            parent.className = 'cursor-pointer flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] transition-all';
+          }
+        });
+
+        const shippingCost = parseInt(e.target.value, 10);
+        const finalTotal = subtotal + shippingCost - discount + adminFee;
+        const formattedShipping = 'Rp ' + shippingCost.toLocaleString('id-ID');
+        const formattedTotal = 'Rp ' + finalTotal.toLocaleString('id-ID');
+
+        if (shippingFeeDisplay) shippingFeeDisplay.textContent = formattedShipping;
+        if (totalPriceDisplay) totalPriceDisplay.textContent = formattedTotal;
+        if (stickyTotal) stickyTotal.textContent = formattedTotal;
+      });
+    });
+
+    // Payment styling sync
+    const paymentRadios = document.querySelectorAll('input[name="payment"]');
+    paymentRadios.forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        paymentRadios.forEach(function(p) {
+          const parent = p.closest('label');
+          if (p.checked) {
+            parent.className = 'cursor-pointer block p-space-sm rounded-lg bg-secondary-fixed text-on-secondary-fixed shadow-[3px_3px_0px_#171717] transition-all';
+          } else {
+            parent.className = 'cursor-pointer block p-space-sm rounded-lg bg-surface-container-low text-on-surface shadow-[2px_2px_0px_#171717] transition-all';
+          }
+        });
+      });
+    });
+
+    // Delight click interaction on pay button
+    const payBtn = document.getElementById('pay-button');
+    if (payBtn) {
+      payBtn.addEventListener('click', function() {
+        payBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span><span>Memproses...</span>';
+        setTimeout(function() {
+          payBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Berhasil!</span>';
+          payBtn.classList.remove('bg-primary');
+          payBtn.classList.add('bg-tertiary-container');
+        }, 1200);
+      });
+    }
+  })();
+</script></main></body></html>

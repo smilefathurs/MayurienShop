@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MayurienShop</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&family=Fredoka:wght@600;700&family=Nunito+Sans:wght@400;500;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&family=Nunito+Sans:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#d0bcff", "on-background": "#e4e1eb", "on-surface-variant": "#cbc4d2", "on-tertiary-fixed-variant": "#104688", "primary-container": "#b39af0", "on-tertiary-fixed": "#001b3e", "primary": "#d0bcff", "on-secondary-container": "#f799bd", "inverse-surface": "#e4e1eb", "tertiary": "#aac7ff", "on-primary": "#381f6e", "secondary-fixed-dim": "#ffb0cd", "primary-fixed-dim": "#d0bcff", "on-error-container": "#ffdad6", "surface-bright": "#393840", "on-secondary-fixed": "#3e0021", "surface-dim": "#131319", "on-primary-container": "#452e7c", "tertiary-fixed-dim": "#aac7ff", "on-surface": "#e4e1eb", "on-primary-fixed": "#230259", "surface": "#131319", "outline": "#948e9b", "surface-container-highest": "#34343b", "error": "#ffb4ab", "inverse-on-surface": "#303037", "inverse-primary": "#6850a0", "on-tertiary-container": "#003b7c", "surface-container": "#1f1f26", "outline-variant": "#494550", "on-error": "#690005", "on-tertiary": "#002f65", "error-container": "#93000a", "on-primary-fixed-variant": "#4f3886", "surface-container-lowest": "#0d0e14", "secondary-container": "#762d4e", "tertiary-container": "#7fa8f1", "primary-fixed": "#e9ddff", "background": "#131319", "surface-container-low": "#1b1b22", "tertiary-fixed": "#d7e3ff", "on-secondary-fixed-variant": "#762d4e", "on-secondary": "#591637", "secondary-fixed": "#ffd9e4", "surface-container-high": "#292931", "surface-variant": "#34343b", "secondary": "#ffb0cd" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "margin-desktop": "2.5rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1rem" }, fontFamily: { "body-md": ["Nunito Sans"], "display-lg-mobile": ["Epilogue"], "display-lg": ["Epilogue"], "headline-md": ["Epilogue"], "body-lg": ["Nunito Sans"], "headline-lg-mobile": ["Epilogue"], "label-lg": ["Nunito Sans"], "headline-lg": ["Epilogue"], "headline-sm": ["Epilogue"], "body-sm": ["Nunito Sans"], "label-md": ["Nunito Sans"], "numeric-price": ["Nunito Sans"], "brand": ["Fredoka", "sans-serif"] }, fontSize: { "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }], "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }], "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "500" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "700" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "700" }], "numeric-price": ["18px", { lineHeight: "24px", fontWeight: "800" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#131319;color:#e4e1eb;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-low/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-brand text-[21px] font-bold tracking-tight text-primary leading-none">Mayurien<span class="text-secondary">Shop</span></span><span class="material-symbols-outlined text-secondary text-[18px] animate-pulse">auto_awesome</span></div><div class="flex items-center gap-1 mt-0.5"><span class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-1.5 py-0.5 rounded-full uppercase leading-none text-[9px]">Alat Tulis Imut</span></div></div></div><div class="flex items-center gap-1"><button aria-label="Pencarian" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Mode Gelap Aktif" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-secondary hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><a aria-label="Keranjang belanja" class="relative w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" data-path="keranjang" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 bg-secondary text-on-secondary font-label-md text-[10px] leading-tight flex items-center justify-center rounded-full">3</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter pb-8 gap-space-md">
+<!-- Top Notice / Timer & Header -->
+<div class="flex flex-col gap-space-xs mt-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+          Keranjang Belanja 
+          <span class="text-secondary text-[22px]">🛒</span>
+</h1>
+<span class="bg-surface-container-high text-primary font-label-md text-label-md px-2 py-0.5 rounded-full shadow-[2px_2px_0_#0d0e14]">
+          3 Item
+        </span>
+</div>
+<button aria-label="Hapus semua item" class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+<span>Kosongkan</span>
+</button>
+</div>
+<!-- Timer Chip / Badge -->
+<div class="flex items-center gap-2 bg-surface-container-high px-3 py-2 rounded-xl text-on-surface shadow-[3px_3px_0_#0d0e14]">
+<span class="material-symbols-outlined text-secondary text-[18px] animate-pulse">schedule</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Stok barang tersimpan aman selama <span class="font-label-md text-primary font-bold">59:42 menit</span>
+</p>
+</div>
+</div>
+<!-- Free Shipping Progress Banner (86%) -->
+<div class="bg-surface-container p-3.5 rounded-xl shadow-[3px_3px_0_#0d0e14] flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[2px_2px_0_#0d0e14]">
+<span class="material-symbols-outlined text-[17px]">local_shipping</span>
+</span>
+<p class="font-label-md text-label-md text-on-surface">
+          Belanja <span class="text-secondary font-bold">Rp 21.000</span> lagi untuk <span class="text-primary font-bold tracking-wide">GRATIS ONGKIR!</span>
+</p>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">86%</span>
+</div>
+<!-- Progress Track & Animated Sparkle -->
+<div class="relative w-full h-2.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-primary-container rounded-full" style="width: 86%;"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-sm text-[11px] leading-tight pt-0.5">
+<span>Rp 176.000 tercapai</span>
+<span>Target: Rp 197.000 (Min. Rp 200.000)</span>
+</div>
+</div>
+<!-- Cart Items List (Vertical Card Stack) -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Daily Planner -->
+<div class="bg-surface-container rounded-xl p-3 shadow-[3px_3px_0_#0d0e14] flex flex-col gap-3 transition-transform">
+<div class="flex gap-3">
+<!-- Thumbnail -->
+<div class="relative w-20 h-20 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-[2px_2px_0_#0d0e14]">
+<img class="w-full h-full object-cover" data-alt="Cute aesthetic pastel lilac cloud daily planner notebook laying on dark cozy wooden desk with soft cinematic studio lighting and playful stationery stickers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwlYYB18k6J3SWwb55MRofbh1UwnGICJnaz6BQt8kYrdPJunhi6Z_tMEnihIFNcSfZ1yaImahclSTiPkygvwfrmVpKTrIA1Db_adpi_SS8Mftn3suAsYH3aFxb11oOfFz0FNz9_3H-eDMQGy48qNKb5bPInViDXljcII58wNiDZaVutAPkR6dr5xhVKZ3BFYBnXotZuB6qpIWT8ysr-4ElkFG_hOxsiX9aHhaxDQ"/>
+<span class="absolute bottom-1 left-1 bg-surface-container-lowest/80 backdrop-blur-sm text-secondary text-[9px] font-bold px-1 rounded">2025</span>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div class="flex items-start justify-between gap-1">
+<h2 class="font-headline-sm text-[15px] leading-snug text-on-surface font-bold truncate">
+              Pastel Cloud Daily Planner 2025
+            </h2>
+<button aria-label="Hapus item 1" class="text-on-surface-variant hover:text-error transition-colors p-1 -mr-1 -mt-1 rounded-lg" type="button">
+<span class="material-symbols-outlined text-[19px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="bg-surface-container-high text-on-surface-variant font-label-md text-[11px] px-2 py-0.5 rounded-md">
+              Lilac Cloud / Grid
+            </span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-numeric-price text-primary font-bold text-[16px] leading-none">Rp 68.000</span>
+<span class="text-on-surface-variant text-[11px] line-through">Rp 85.000</span>
+</div>
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container-high rounded-lg p-0.5 shadow-[2px_2px_0_#0d0e14]">
+<button aria-label="Kurang 1" class="w-7 h-7 rounded-md bg-surface-container text-on-surface hover:bg-surface-container-highest flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-8 text-center font-numeric-price text-on-surface text-[14px] font-bold">1</span>
+<button aria-label="Tambah 1" class="w-7 h-7 rounded-md bg-surface-container text-on-surface hover:bg-surface-container-highest flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Morandi Gel Pen Set -->
+<div class="bg-surface-container rounded-xl p-3 shadow-[3px_3px_0_#0d0e14] flex flex-col gap-3 transition-transform">
+<div class="flex gap-3">
+<!-- Thumbnail -->
+<div class="relative w-20 h-20 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-[2px_2px_0_#0d0e14]">
+<img class="w-full h-full object-cover" data-alt="Pack of vintage pastel Morandi gel ink pens lying neatly in a row on a moody dark graphite surface with soft lavender rim lighting cute aesthetic stationery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1oHjf0Lb9qJxkVb9HskjDO9fe-wwOYSWiSaaX-rjH740F-jYcWJK2CKwEVEfMnkPc_Vv3cv-5j6jXqgIYjpLesjQBn60JTCiWnLA1OB6yGbVmGKFYZY6HPzd46b1wu33_2MdPoiHv2humublAb4Z8SzkWlOz8SVKex8h0mBVxEibMMDialmUAEpQDwpPTNTHDS7-CBabDLPic9MJJPVMobeUw66H5MQRvMcnPaQ"/>
+<span class="absolute top-1 left-1 bg-secondary text-on-secondary text-[8px] font-bold px-1 rounded uppercase">Set 5 Pcs</span>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div class="flex items-start justify-between gap-1">
+<h2 class="font-headline-sm text-[15px] leading-snug text-on-surface font-bold truncate">
+              Vintage Morandi Gel Pen 0.5mm
+            </h2>
+<button aria-label="Hapus item 2" class="text-on-surface-variant hover:text-error transition-colors p-1 -mr-1 -mt-1 rounded-lg" type="button">
+<span class="material-symbols-outlined text-[19px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="bg-surface-container-high text-on-surface-variant font-label-md text-[11px] px-2 py-0.5 rounded-md">
+              Soft Pastel Edition
+            </span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-numeric-price text-primary font-bold text-[16px] leading-none">Rp 77.000</span>
+<span class="text-on-surface-variant text-[11px]">Rp 38.500 / unit</span>
+</div>
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container-high rounded-lg p-0.5 shadow-[2px_2px_0_#0d0e14]">
+<button aria-label="Kurang 1" class="w-7 h-7 rounded-md bg-surface-container text-on-surface hover:bg-surface-container-highest flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-8 text-center font-numeric-price text-on-surface text-[14px] font-bold">2</span>
+<button aria-label="Tambah 1" class="w-7 h-7 rounded-md bg-surface-container text-on-surface hover:bg-surface-container-highest flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Ceramic Pen Holder -->
+<div class="bg-surface-container rounded-xl p-3 shadow-[3px_3px_0_#0d0e14] flex flex-col gap-3 transition-transform">
+<div class="flex gap-3">
+<!-- Thumbnail -->
+<div class="relative w-20 h-20 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-[2px_2px_0_#0d0e14]">
+<img class="w-full h-full object-cover" data-alt="Handcrafted ceramic tulip flower shaped pastel yellow pen holder cup on dark moody desk with warm rim light aesthetic Japanese stationery shop display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgwVh5siNjUX1zIsajwHuv-jH1jC-XYu6qfC1rAKp_ODUkjbwM1Mk0RK26EMY6uKFccaeM4r6f6wJ9J_USF8q2z9BZh1BEg6j5_DJiJCprYWWTo3ECi1ZnpKybE0ylaiXfMtxWIyciEHeQYIhTebfs9IHDm29mGSnQQLRzBt6Bs7kQWTi_C41FV8pFSDqjCi7fNypKgeO5T9ZOSZbpGzIWeI4q1cKvKysyncre-Q"/>
+<span class="absolute bottom-1 right-1 bg-surface-container-lowest/80 text-secondary text-[9px] font-bold px-1 rounded">Handmade</span>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div class="flex items-start justify-between gap-1">
+<h2 class="font-headline-sm text-[15px] leading-snug text-on-surface font-bold truncate">
+              Mini Tulip Ceramic Pen Holder
+            </h2>
+<button aria-label="Hapus item 3" class="text-on-surface-variant hover:text-error transition-colors p-1 -mr-1 -mt-1 rounded-lg" type="button">
+<span class="material-symbols-outlined text-[19px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="bg-surface-container-high text-on-surface-variant font-label-md text-[11px] px-2 py-0.5 rounded-md">
+              Buttercup Yellow
+            </span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-numeric-price text-primary font-bold text-[16px] leading-none">Rp 52.000</span>
+<span class="text-on-surface-variant text-[11px] line-through">Rp 58.000</span>
+</div>
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container-high rounded-lg p-0.5 shadow-[2px_2px_0_#0d0e14]">
+<button aria-label="Kurang 1" class="w-7 h-7 rounded-md bg-surface-container text-on-surface hover:bg-surface-container-highest flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-8 text-center font-numeric-price text-on-surface text-[14px] font-bold">1</span>
+<button aria-label="Tambah 1" class="w-7 h-7 rounded-md bg-surface-container text-on-surface hover:bg-surface-container-highest flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Voucher & Promo Code Box -->
+<div class="bg-surface-container rounded-xl p-3.5 shadow-[3px_3px_0_#0d0e14] flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">confirmation_number</span>
+        Voucher Diskon Toko
+      </span>
+<span class="text-primary font-label-md text-[12px] flex items-center gap-0.5">
+        Lihat Semua <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</span>
+</div>
+<!-- Input + Button Group -->
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<input aria-label="Kode Promo" class="w-full bg-surface-container-lowest text-on-surface font-label-lg tracking-wider uppercase px-3 py-2.5 rounded-xl shadow-[inset_2px_2px_0_#0d0e14] focus:outline-none placeholder:text-on-surface-variant" type="text" value="GEMAS15"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-secondary text-[18px]">verified</span>
+</div>
+<button class="px-4 py-2.5 bg-primary-container text-on-primary-container font-label-lg rounded-xl shadow-[3px_3px_0_#0d0e14] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center" type="button">
+        Terapkan
+      </button>
+</div>
+<!-- Active Promo Badge Alert -->
+<div class="flex items-center justify-between bg-surface-container-high px-3 py-2 rounded-lg text-on-surface shadow-[2px_2px_0_#0d0e14]">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<p class="font-body-sm text-[12px] text-on-surface truncate">
+          Voucher <span class="font-bold text-secondary">GEMAS15</span> (-Rp 15.000) aktif! 🎉
+        </p>
+</div>
+<button aria-label="Batal voucher" class="text-on-surface-variant hover:text-error transition-colors ml-2" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Bonus Gift Card -->
+<div class="bg-surface-container rounded-xl p-3.5 shadow-[3px_3px_0_#0d0e14] relative overflow-hidden flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 shadow-[2px_2px_0_#0d0e14]">
+<span class="material-symbols-outlined text-[26px]">redeem</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-secondary font-bold">Gratis Sticker Pack! 🎁</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-snug mt-0.5">
+        Semua pesanan tanpa min. belanja dapat 1 set stiker hologram gemas edisi Mayurien.
+      </p>
+</div>
+</div>
+<!-- Summary Card & Sticky Bottom Action -->
+<div class="bg-surface-container rounded-2xl p-4 shadow-[4px_4px_0_#0d0e14] flex flex-col gap-3.5 mt-1">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">receipt_long</span>
+      Ringkasan Belanja
+    </h3>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Total Harga Produk (4 pcs)</span>
+<span class="font-numeric-price text-on-surface text-[14px]">Rp 197.000</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Diskon Promo Toko (GEMAS15)</span>
+<span class="font-numeric-price text-secondary font-bold text-[14px]">-Rp 15.000</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Estimasi Ongkos Kirim</span>
+<div class="flex items-center gap-1.5">
+<span class="line-through text-[12px]">Rp 12.000</span>
+<span class="font-numeric-price text-on-surface text-[14px]">Rp 12.000</span>
+</div>
+</div>
+<div class="h-0.5 bg-surface-container-highest my-1 rounded-full"></div>
+<div class="flex items-baseline justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Total Pembayaran</span>
+<span class="text-secondary font-label-md text-[11px] leading-tight font-bold">Hemat Rp 15.000</span>
+</div>
+<span class="font-numeric-price text-primary text-[22px] font-extrabold tracking-tight">
+          Rp 194.000
+        </span>
+</div>
+</div>
+<!-- Main CTA Button -->
+<button class="w-full py-3.5 px-4 bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-[16px] font-bold rounded-xl shadow-[3px_3px_0_#0d0e14] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all flex items-center justify-center gap-2" type="button">
+<span>Lanjut ke Pembayaran</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Trust / Security Micro-badge -->
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant text-[11px] pt-1">
+<span class="material-symbols-outlined text-primary text-[15px]">verified_user</span>
+<span>100% Pembayaran Aman (QRIS, BCA, Mandiri, ShopeePay)</span>
+</div>
+</div>
+</div>
+<script>
+  // Simple stepper interactive micro-feedback
+  document.querySelectorAll('button[aria-label^="Kurang"], button[aria-label^="Tambah"]').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const parent = button.closest('.flex.items-center.bg-surface-container-high');
+      const countEl = parent.querySelector('span.font-numeric-price');
+      let currentVal = parseInt(countEl.textContent.trim(), 10);
+      
+      if (button.getAttribute('aria-label').startsWith('Tambah')) {
+        countEl.textContent = currentVal + 1;
+      } else if (button.getAttribute('aria-label').startsWith('Kurang') && currentVal > 1) {
+        countEl.textContent = currentVal - 1;
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-primary-container bg-surface-container-highest/80 shadow-[0_0_12px_rgba(179,154,240,0.35)]"><div class="flex items-center justify-around h-20 px-gutter"><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-all" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">cottage</span><span class="font-label-md text-label-md leading-none">Beranda</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-all" data-path="katalog-produk" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-md text-label-md leading-none">Katalog</span></a><a aria-current="page" class="relative flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] px-space-xs py-1 rounded-xl transition-all text-primary-container bg-surface-container-highest/80 shadow-[0_0_12px_rgba(179,154,240,0.35)]" data-path="keranjang" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_cart</span><span class="absolute -top-1.5 -right-2.5 min-w-[16px] h-[16px] px-1 bg-secondary text-on-secondary font-label-md text-[9px] leading-tight flex items-center justify-center rounded-full">3</span></div><span class="font-label-md text-label-md leading-none">Keranjang</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[48px] px-space-xs py-1 rounded-xl text-on-surface-variant transition-all" data-path="akun-bantuan" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-md text-label-md leading-none">Akun</span></a></div></nav></body></html>

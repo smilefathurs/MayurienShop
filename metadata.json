@@ -1,0 +1,8 @@
+{
+  "name": "MayurienShop",
+  "description": "Little Things, Big Happiness! Toko online stationery estetik, journal supplies, dan cute desk accessories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
